@@ -1,23 +1,46 @@
 .new_table #header .holder-operatop {
-  margin-top: 16px;
+	margin-top: 16px;
 }
 .new_table #header {
-  height: 60px;
-  border-bottom: 2px solid #ABABAB;
-  margin: 0;
+	height: 60px;
+	border-bottom: 2px solid #ABABAB;
+	margin: 0;
  }
  .add {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: url(../images/bg-add.gif) no-repeat 0 0;
-  width: 64px;
-  height: 64px;
-  text-indent: -9999px;
-  overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(../images/bg-add.gif) no-repeat 0 0;
+	width: 64px;
+	height: 64px;
+	text-indent: -9999px;
+	overflow: hidden;
 }
 .add:hover {
 	background-position: -64px 0;
+}
+.search_block {
+	position: absolute;
+	top: 18px;
+	left: 160px;
+	height: 28px;
+	width: 671px;
+}
+.filter_button,
+.search_button {
+	background: url(../images/button_search.png) no-repeat 0 0;
+	float: right;
+	height: 100%;
+	width: 55px;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+.filter_button {
+	background: url(../images/button_filter.png) no-repeat 0 0;
+}
+.search_button:hover,
+.filter_button:hover {
+	background-position: -56px 0;
 }
 /*
 =============================================
@@ -88,10 +111,6 @@
 	color: #111;
 	font-family: "ArialBold";
 }
-/*.code_tb,
-.descr_tb {
-	color: #000
-}*/
 .warning_def {
 	background-color: #EDF0F2
 }
