@@ -1,3 +1,6 @@
+/*=====================================
+			OLD STYLES
+=======================================*/
 .new_table #header .holder-operatop {
 	margin-top: 16px;
 }
@@ -42,9 +45,8 @@
 .filter_button:hover {
 	background-position: -56px 0;
 }
-/*
-=============================================
-*/
+/*=========================================*/
+
 @font-face {
     font-family: "ArialRegular";
     src: url("../fonts/ArialRegular/ArialRegular.eot");
