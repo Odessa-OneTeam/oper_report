@@ -1,0 +1,598 @@
+/* ----- universal -----*/
+.statistics-body {
+	font-size: 13px;
+	color: #737880
+}
+.no-margin-top {
+	margin-top: 0 !important
+}
+.margin-bottom {
+	margin-bottom: 15px
+}
+.position-middle {
+	vertical-align: middle
+} /* block, which we add this rule, must have display: inline-block */
+
+.position-top {
+	vertical-align: top
+}
+.position-bottom {
+	vertical-align: bottom
+}
+.main-text {
+	margin-right: 2px
+}
+.with-eye label {
+	width: 90%
+}
+
+
+
+/* columns */
+.col {
+	display: inline-block
+}
+
+.half {
+	width: 45% !important
+}
+.exact-half {
+	width: 48%;
+	text-align: right
+}
+.one-third {
+	width: 32%
+}
+	.one-third .main-text {
+		margin-right: 5px
+	}
+.one-third:nth-child(3n) {
+	width: 35%
+}
+.one-fifths {
+	width: 19.33% !important;
+	padding: 0 !important
+}
+.three-fifts {
+	width: 47.66% !important;
+	padding: 0 !important
+}
+
+
+
+
+/* ----- unique ----- */
+/* --- sub label --- */
+.sub-label {
+	padding-left: 30px;
+	position: relative
+}
+	.statistics-form .sub-label label {
+		padding-top: 10px;
+		margin-top: 0
+	}
+.sub-label:before {
+	content: "";
+	height: 20px;
+	width: 8px;
+	position: absolute;
+	left: 15px;
+	background: url("../images/elements/sub-line.png") no-repeat
+}
+
+
+/* --- small inputs --- */
+.sm-inputs-line {
+	margin-bottom: 10px;
+	position: relative
+}
+	.sm-inputs input[type="text"] {
+		width: 30px;
+		margin-right: 5px !important
+	}
+	.sm-inputs input[type="text"]:last-child {
+		margin: 0 !important
+	}
+
+
+/* hr */
+.separator {
+	background: #737880;
+	border: none;
+	height: 1px
+}
+
+
+/* --- field and field blocks classes --- */
+.date-field {
+	position: relative;
+	margin-bottom: 1em
+}
+.date-input {
+	width: 82% !important;
+	padding-right: 31px !important
+}
+.statistics-form .date-input:-ms-input-placeholder,
+.statistics-form .date-input::-webkit-input-placeholder {
+   font-style: normal
+}
+.statistics-form .date-input:-moz-placeholder, /* Firefox 18- */
+.statistics-form .date-input::-moz-placeholder  /* Firefox 19+ */ {
+   font-style: normal
+}
+.date-fields {
+	padding-left: 4.5%
+}
+.date-fields:before {
+	content: "";
+	height: 31px;
+	width: 8px;
+	position: absolute;
+	left: 0;
+	top: 15px;
+	background: url("../images/elements/double-line.png") no-repeat
+}
+.date-field .ui-datepicker-trigger {
+	top: 2px;
+	right: 2px;
+	width: 18px;
+	height: 18px;
+	background: url("../images/button-date.png") no-repeat
+}
+.date-field .ui-datepicker-trigger:hover {
+	background-position: -18px 0
+}
+
+.time-interval .date-fields {
+	display: none
+}
+
+
+/* ----- buttons ----- */
+.usual-next-btn {
+	display: inline-block;
+	height: 28px;
+	width: 27px;
+	background: url(../images/elements/arrow-btn.png) no-repeat
+}
+.usual-next-btn:hover {
+	background-position: 100% 0
+}
+
+
+/* --- scale buttons --- */
+.icon {
+	display: inline-block;
+	position: absolute;
+	background-position: 0;
+	background-repeat: no-repeat
+}
+.add-scale {
+	height: .8em;
+	width: 1.4%;
+	top: 27px;
+	right: 230px;
+	background: url(../images/icon-plus.png) no-repeat
+}
+.remove-icon {
+	background: url(../images/icon-remove.png) no-repeat
+}
+.remove-scale {
+	height: .6em;
+	width: 12px;
+	top: 28px;
+	right: 215px;
+}
+.sm-inputs-line .remove-scale {
+	top: 7px;
+	right: 90px
+}
+.one-fifths .remove-scale {
+	right: 0
+}
+.sm-inputs-line.with-desc .remove-scale {
+	/*width: 5%;*/
+	right: 0
+}
+.remove-victims {
+	top: 6px
+}
+
+
+
+
+/* ----- checkboxes ----- */
+/* --- checkboxes for type reports --- */
+.checkboxes-item {
+    width: 33%;
+    float: left;
+}
+.checkboxes-item input[type="checkbox"] {
+	position: absolute;
+	left: -9999px
+}
+.checkboxes-item input[type="checkbox"] + label::before {
+	content: "";
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px 0 0;
+	background: url(../images/elements/ch-box.png) no-repeat;
+	cursor: pointer
+}
+.checkboxes-item input[type="checkbox"]:checked + label::before {
+	background-position: 0 -12px
+}
+
+
+/* --- checkboxes as eye --- */
+span.with-eye {
+	margin: 3px
+}
+.without-eye {
+	margin: 3px 15px
+}
+
+.statistics-form .has-eye label {
+	float: left;
+	width: 85%;
+}
+.label-eye {
+	display: inline !important;
+	margin: 0 3px;
+}
+.checkbox-eye {
+	display: none
+}
+.checkbox-eye + .label-eye {
+	cursor: pointer
+}
+.checkbox-eye + .label-eye::before {
+	content: "";
+	display: inline-block;
+	height: 9px;
+	width: 16px;
+	background: url(../images/icon-eye.png) no-repeat -16px 0
+}
+.checkbox-eye:checked + .label-eye::before {
+	background-position: 0
+}
+
+
+/* --- All page title --- */
+.statistics-page-title {
+	width: 20%;
+	float: left
+}
+.statistics-page-title .page-title {
+	margin: 0;
+	background: none;
+	color: #44474b;
+	width: 100%
+}
+
+/* ----- options-form ----- */
+.options {
+	display: block;
+	width: 25%;
+	float: right;
+	margin-bottom: 35px
+}
+.options-group {
+	display: inline-block
+}
+.options-group .customSelect {
+	width: 200px
+}
+.options-group:last-child {
+	margin-left: 7px
+}
+
+
+
+
+/* ----- main form ----- */
+.statistics-main-form {
+	clear: both
+}
+
+
+/* --- block for reset filters --- */
+.reset-filter-block {
+	width: 160px;
+	float: left
+}
+	.reset-filter-block .filter {
+		display: block;
+		background: url(../images/btn-filter.png) no-repeat;
+		width: 63px;
+		height: 64px;
+		text-indent: -9999px;
+		overflow: hidden;
+	}
+	.reset-filter-block .filter:hover {
+		background-position: -64px 0;
+	}
+
+	/* -- reset link -- */
+	.reset-filter {
+		padding: 13px 10px 13px 25px;
+		position: relative;
+	}
+		.reset-filter .reset-inscription {
+			text-transform: uppercase;
+			text-decoration: none;
+			color: #878787;
+		}
+		.reset-filter .reset-inscription:before {
+			content: "";
+			height: 15px;
+			width: 16px;
+			position: absolute;
+			left: 0;
+			top: 13px;
+			background: url("../images/icon-reset.png") no-repeat
+		}
+		.reset-filter .reset-inscription:hover:before {
+			background-position: -16px 0
+		}
+
+
+
+
+
+.statistics-form {
+	float: right;
+	width: 770px;
+	margin-right: 28px
+}
+#main .statistics-form .info {
+	width: 100%;
+	margin: 0 0 8px;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box
+}
+#main .statistics-form .info.clear {
+	margin: 40px 0;
+	display: table;
+	border: none;
+	background: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none
+}
+.statistics-form .info h2 {
+	font-size: 14px;
+	line-height: 25px;
+	height: 25px;
+	padding: 0 15px;
+	margin: 0;
+	width: 96.1%
+}
+.clear { /* h2 reset */
+	background: none;
+	color: #737880;
+	border-top: 1px solid;
+	border-bottom: 1px solid
+}
+.statistics-form .info .info-group {
+	padding: 0 15px 5px
+}
+.statistics-form .info .info-group .info-line {
+	margin: 15px 0;
+	position: relative
+}
+#kind-n-type {
+	position: relative
+}
+.statistics-form label {
+	font-size: 13px;
+	margin: 5px 5px 5px 0;
+	display: block;
+	cursor: default
+}
+
+
+
+
+/* --- dark block info --- */
+#main .statistics-form .info.dark {
+	background-color: #737880;
+	display: table;
+	padding: 10px 15px
+}
+.statistics-form .info.dark .info-group {
+	padding: 0;
+	float: left
+}
+.statistics-form .info.dark .info-group:first-child {
+	width: 60%
+}
+.statistics-form .info.dark .info-group:last-child {
+	width: 40%
+}
+.statistics-form .info.dark label {
+	color: #fff;
+	margin: 0 5px 5px 0;
+	line-height: 25px
+}
+
+
+/* --- width types for inputs --- */
+.statistics-form .w-large {
+	width: 70%
+}
+.statistics-form .w-small {
+	width: 35%
+}
+
+
+/* --- custom Select in main form --- */
+.statistics-form .customSelect {
+	width: 95.3% !important
+}
+.statistics-body .selectOptions ul li a,
+.statistics-form .selectButton .center,
+.statistics-form input[type="text"],
+.statistics-form textarea {
+	font-size: .9em;
+	height: 1.7em;
+	line-height: 1.7em
+}
+.statistics-form input[type="text"],
+.statistics-form textarea {
+	padding: 0 7px;
+	margin: 0
+}
+.statistics-form textarea {
+	min-height: 20px !important
+}
+
+.statistics-form .selectButton .right {
+	background: url(../images/button-select.png) no-repeat;
+	width: 17px;
+	height: 18px
+}
+
+.statistics-form input:-ms-input-placeholder,
+.statistics-form textarea:-ms-input-placeholder {
+	font-style: italic
+}
+.statistics-form input::-webkit-input-placeholder,
+.statistics-form textarea::-webkit-input-placeholder {
+   font-style: italic
+}
+.statistics-form input:-moz-placeholder, /* Firefox 18- */
+.statistics-form textarea:-moz-placeholder, 
+.statistics-form input::-moz-placeholder,  /* Firefox 19+ */
+.statistics-form textarea::-moz-placeholder  {  
+   font-style: italic
+}
+
+.statistics-form .sm-inputs-line input:-ms-input-placeholder {
+	color: #b9b9b9;
+	font-style: normal
+}
+.statistics-form .sm-inputs-line input::-webkit-input-placeholder {
+	color: #b9b9b9;
+	font-style: normal
+}
+.statistics-form .sm-inputs-line input:-moz-placeholder,
+.statistics-form .sm-inputs-line input::-moz-placeholder {
+	color: #b9b9b9;
+	font-style: normal
+}
+.statistics-form .w-large input[type="text"] {
+	width: 92.5%
+}
+
+.statistics-form .dateTimePicker,
+.statistics-form .ui-datepicker-trigger {
+	background: url(../images/icon_calendar-small.png) no-repeat 0 0;
+	width: 16px;
+	height: 16px;
+	top: 2px;
+	right: 5px
+}
+.statistics-form .dateTimePicker:hover,
+.statistics-form .ui-datepicker-trigger:hover {
+	background-position: -16px 0
+}
+
+/* ----- medical-team block -----*/
+.medical-team label {
+	display: inline-block;
+	width: 50%
+}
+.medical-team img {
+	display: inline-block;
+	width: 20%
+}
+.medical-team .half {
+	margin-left: 5px
+}
+
+
+
+/* bottom module */
+.result-count,
+.buttons,
+.result-count .customSelect {
+	display: inline-block
+}
+.result-count {
+	float: left
+}
+.result-count .label-results {
+	vertical-align: top;
+	line-height: 25px;
+	margin-right: 15px
+}
+.result-count .customSelect {
+	width: auto !important
+}
+.buttons {
+	float: right
+}
+.buttons .save-changes {
+	background: url(../images/bg-save.png) no-repeat 0 0 ;
+	width: 32px;
+	height: 32px;
+	text-indent: -9999px;
+	overflow: hidden;
+	float: left;
+	margin-right: 50px
+}
+.buttons .save-changes:hover {
+	background-position: -32px 0
+}
+.buttons .btn.start {
+	margin-right: -27px
+}
+
+
+
+
+/* ----- footer ----- */
+.in-statistic-page {
+	border: none
+}
+	.total-info {
+		padding: 0 15px
+	}
+		.col p {
+			color: #000;
+			margin: 0
+		}
+		.files {
+			width: 15%
+		}
+			.files a {
+				float: left
+			}
+		.peoples {
+			float: right;
+			text-align: right
+		}
+
+
+
+
+
+
+/* Toogle groups */
+.toogle-title {
+	cursor: pointer
+}
+.toogle-title.closed {
+	background: #edf0f2;
+	color: #737880
+}
+.toogle-box {
+	display: none
+}
+.toogle-box.open {
+	display: block
+}
