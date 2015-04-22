@@ -42,13 +42,13 @@
 }
 
 .new_table {
+	font: 11px/22px "ArialRegular";
 	margin: 0 auto;
 	width: 1280px;
 }
 .table_caption,
 .info_panel,
 .table {
-	font-size: 12px;
 	display: table;
 	width: 100%
 }
@@ -74,7 +74,7 @@
 	vertical-align: middle;
 	text-align: left;
 	color: #737880;
-	padding: 0 20px;
+	padding: 0 11px;
 }
 .info_tb  {
 	width: 8px;
@@ -82,6 +82,16 @@
 .warning_red {
 	background-color: #EBDBDB;
 }
+.warning_red .code_tb,
+.warning_red .descr_tb,
+.caption_td_name {
+	color: #111;
+	font-family: "ArialBold";
+}
+/*.code_tb,
+.descr_tb {
+	color: #000
+}*/
 .warning_def {
 	background-color: #EDF0F2
 }
@@ -136,14 +146,9 @@
 .ico_warn {
 	margin-left: 0
 }
-.caption_td,
-.process_tb,
-.local_tb,
-.date_tb,
-.code_tb {
-	width: 150px
-}
 .ico_scale_color {
+	padding: 0 13px	0 20px;
+	font-size: 21px;
 	background: url(../images/ico-scale-color-id.png) no-repeat;
 
 }
@@ -151,4 +156,20 @@
 	border-right: 1px solid #D2D2D2;
 	height: 18px;
 	float: right;
+}
+.caption_td,
+.local_tb,
+.process_tb,
+.date_tb,
+.code_tb {
+  padding-left: 24px;
+  width: 100px;
+}
+.caption_td_name {
+	padding: 0;
+	width: 145px;
+}
+.caption_td_name,
+.date_tb span {
+	font-family: "ArialBold";
 }
