@@ -22,6 +22,24 @@
 /*
 =============================================
 */
+@font-face {
+    font-family: "ArialRegular";
+    src: url("../fonts/ArialRegular/ArialRegular.eot");
+    src: url("../fonts/ArialRegular/ArialRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ArialRegular/ArialRegular.woff") format("woff"),
+    url("../fonts/ArialRegular/ArialRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "ArialBold";
+    src: url("../fonts/ArialBold/ArialBold.eot");
+    src: url("../fonts/ArialBold/ArialBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ArialBold/ArialBold.woff") format("woff"),
+    url("../fonts/ArialBold/ArialBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
 
 .new_table {
 	margin: 0 auto;
@@ -98,14 +116,14 @@
   padding: 0 10px;
 }
 .ico_warn {
-	background: url(../img/ico-warn.png) no-repeat;
+	background: url(../images/ico-warn.png) no-repeat;
 	padding: 2px;
 }
 .ico_status_warn {
-  background: url(../img/ico-status-verification.png) no-repeat;
+  background: url(../images/ico-status-verification.png) no-repeat;
 }
 .ico_status_edit {
-	background: url(../img/ico-status-edit.png) no-repeat;
+	background: url(../images/ico-status-edit.png) no-repeat;
 }
 .ico_warn,
 .ico_status_warn,
@@ -126,7 +144,7 @@
 	width: 150px
 }
 .ico_scale_color {
-	background: url(../img/ico-scale-color-id.png) no-repeat;
+	background: url(../images/ico-scale-color-id.png) no-repeat;
 
 }
 .table_separator {
