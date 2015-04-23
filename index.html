@@ -6,12 +6,12 @@
 	 <link rel="stylesheet"  href="css/all.css" />
 	 <link rel="stylesheet"  href="css/table-new.css" />
 </head>
-<body>
+<body id="table">
 	<div class="new_table">
 		<header id="header">
 			<a class="add" href="#">add</a>
 			<div class="search_block">
-				<input type="text" id="search_table" value="Поиск..." alt="Поиск...">
+				<input type="text" id="search_table"  placeholder="Поиск..." alt="Поиск...">
 				<a href="#" class="filter_button">list</a>
 				<a href="#" class="search_button">search</a>
 			</div>
@@ -27,6 +27,10 @@
 				<a class="login" href="/logout/">login</a>
 			</div>
 		</header>
+		<div class="info_search">
+			<div class="table_cell search_msg"><span class="ico_warn"></span>Найдено донесений: 20</div>
+			<div class="table_cell search_total">Сбросить выборку</div>
+		</div>
 		<div class="info_panel">
 			<div class="table_cell info_msg"><span class="ico_warn"></span>Непроверенных донесений: 2</div>
 			<div class="table_cell info_total">Всего донесений: 35 (из них 10 заключительных)</div>
@@ -39,68 +43,258 @@
 				<div class="table_cell caption_td">масштаб чс<span class="table_separator"></span></div>
 				<div class="table_cell caption_td">вид чс</div>
 			</div>
-			<div class="table_row warning_red">
-				<div class="table_cell date_tb info_tb_red">2014-09-15  /  <span>10:10</span></div>
-				<div class="table_cell code_tb">23556789 <span class="ico_status_warn"></span></div>
-				
-				<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
-				<div class="table_cell local_tb">Локальная ЧС</div>
-				<div class="table_cell process_tb">Техногенный</div>
-			</div>
-			<div class="table_row warning_def">
-				<div class="table_cell date_tb info_tb_yelow">2014-09 / 10:10</div>
-				<div class="table_cell code_tb">23556789 <span class="ico_status_edit"></span></div>
-				<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
-				<div class="table_cell local_tb">Локальная ЧС</div>
-				<div class="table_cell process_tb">Техногенный</div>
-			</div>
-			<div class="table_row warning_blue">
-				<div class="table_cell date_tb info_tb_orange">2014-09 / 10:10</div>
-				<div class="table_cell code_tb">23556789 <span class="ico_status_edit"></span></div>
-				<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
-				<div class="table_cell local_tb">Локальная ЧС</div>
-				<div class="table_cell process_tb">Техногенный</div>
-			</div>
-			<div class="table_row warning_blue">
-				<div class="table_cell date_tb info_tb_yelow">2014-09 / 10:10</div>
-				<div class="table_cell code_tb">23556789</div>
-				<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
-				<div class="table_cell local_tb">Локальная ЧС</div>
-				<div class="table_cell process_tb">Техногенный</div>
-			</div>
-			<div class="table_row warning_red">
-				<div class="table_cell date_tb info_tb_red">2014-09 / 10:10</div>
-				<div class="table_cell code_tb">23556789</div>
+			<div class="wrap">
+				<div class="table_row warning_red">
+					<div class="table_cell date_tb info_tb_red">2014-09-15  /  <span>10:10</span></div>
+					<div class="table_cell code_tb">23556789 <span class="ico_status_warn"></span></div>
+					
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_def">
+					<div class="table_cell date_tb info_tb_yelow">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789 <span class="ico_status_edit"></span></div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_blue">
+					<div class="table_cell date_tb info_tb_orange">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789 <span class="ico_status_edit"></span></div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_blue">
+					<div class="table_cell date_tb info_tb_yelow">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789</div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_red">
+					<div class="table_cell date_tb info_tb_red">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789</div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+							<div class="table_row warning_red">
+					<div class="table_cell date_tb info_tb_red">2014-09-15  /  <span>10:10</span></div>
+					<div class="table_cell code_tb">23556789 <span class="ico_status_warn"></span></div>
+					
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_def">
+					<div class="table_cell date_tb info_tb_yelow">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789 <span class="ico_status_edit"></span></div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_blue">
+					<div class="table_cell date_tb info_tb_orange">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789 <span class="ico_status_edit"></span></div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_blue">
+					<div class="table_cell date_tb info_tb_yelow">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789</div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_red">
+					<div class="table_cell date_tb info_tb_red">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789</div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+							<div class="table_row warning_red">
+					<div class="table_cell date_tb info_tb_red">2014-09-15  /  <span>10:10</span></div>
+					<div class="table_cell code_tb">23556789 <span class="ico_status_warn"></span></div>
+					
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_def">
+					<div class="table_cell date_tb info_tb_yelow">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789 <span class="ico_status_edit"></span></div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_blue">
+					<div class="table_cell date_tb info_tb_orange">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789 <span class="ico_status_edit"></span></div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_blue">
+					<div class="table_cell date_tb info_tb_yelow">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789</div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_red">
+					<div class="table_cell date_tb info_tb_red">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789</div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+					<div class="table_row warning_red">
+					<div class="table_cell date_tb info_tb_red">2014-09-15  /  <span>10:10</span></div>
+					<div class="table_cell code_tb">23556789 <span class="ico_status_warn"></span></div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_def">
+					<div class="table_cell date_tb info_tb_yelow">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789 <span class="ico_status_edit"></span></div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_blue">
+					<div class="table_cell date_tb info_tb_orange">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789 <span class="ico_status_edit"></span></div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_blue">
+					<div class="table_cell date_tb info_tb_yelow">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789</div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_red">
+					<div class="table_cell date_tb info_tb_red">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789</div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+							<div class="table_row warning_red">
+					<div class="table_cell date_tb info_tb_red">2014-09-15  /  <span>10:10</span></div>
+					<div class="table_cell code_tb">23556789 <span class="ico_status_warn"></span></div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_def">
+					<div class="table_cell date_tb info_tb_yelow">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789 <span class="ico_status_edit"></span></div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_blue">
+					<div class="table_cell date_tb info_tb_orange">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789 <span class="ico_status_edit"></span></div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_blue">
+					<div class="table_cell date_tb info_tb_yelow">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789</div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_red">
+					<div class="table_cell date_tb info_tb_red">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789</div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+					<div class="table_row warning_red">
+					<div class="table_cell date_tb info_tb_red">2014-09-15  /  <span>10:10</span></div>
+					<div class="table_cell code_tb">23556789 <span class="ico_status_warn"></span></div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_def">
+					<div class="table_cell date_tb info_tb_yelow">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789 <span class="ico_status_edit"></span></div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_blue">
+					<div class="table_cell date_tb info_tb_orange">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789 <span class="ico_status_edit"></span></div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_blue">
+					<div class="table_cell date_tb info_tb_yelow">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789</div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_red">
+					<div class="table_cell date_tb info_tb_red">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789</div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+					<div class="table_row warning_red">
+					<div class="table_cell date_tb info_tb_red">2014-09-15  /  <span>10:10</span></div>
+					<div class="table_cell code_tb">23556789 <span class="ico_status_warn"></span></div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_def">
+					<div class="table_cell date_tb info_tb_yelow">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789 <span class="ico_status_edit"></span></div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_blue">
+					<div class="table_cell date_tb info_tb_orange">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789 <span class="ico_status_edit"></span></div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_blue">
+					<div class="table_cell date_tb info_tb_yelow">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789</div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
+				<div class="table_row warning_red">
+					<div class="table_cell date_tb info_tb_red">2014-09 / 10:10</div>
+					<div class="table_cell code_tb">23556789</div>
+					<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
+					<div class="table_cell local_tb">Локальная ЧС</div>
+					<div class="table_cell process_tb">Техногенный</div>
+				</div>
 
-				<div class="table_cell descr_tb">Опасные геофизические явления (с последуюющим горением)</div>
-				<div class="table_cell local_tb">Локальная ЧС</div>
-				<div class="table_cell process_tb">Техногенный</div>
-			</div>
-			<div class="table_row">
-				<div class="table_cell date_tb info_tb_red">2014-09 / 10:10</div>
-				<div class="table_cell code_tb">23556789</div>
-				<div class="table_cell descr_tb">Аварии пассажирских поездов и метрополитена</div>
-				<div class="table_cell local_tb">Локальная ЧС</div>
-				<div class="table_cell process_tb">Техногенный</div>
-			</div>
-			<div class="table_row">
-				<div class="table_cell"></div>
-				<div class="table_cell"></div>
-				<div class="table_cell"></div>
-				<div class="table_cell"></div>
-				<div class="table_cell"></div>
-				<div class="table_cell"></div>
-				<div class="table_cell"></div>
-			</div>
-			<div class="table_row">
-				<div class="table_cell"></div>
-				<div class="table_cell"></div>
-				<div class="table_cell"></div>
-				<div class="table_cell"></div>
-				<div class="table_cell"></div>
-				<div class="table_cell"></div>
-				<div class="table_cell"></div>
-			</div>
+		
+		</div>
 		</div>
 	</div>
 

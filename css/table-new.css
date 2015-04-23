@@ -1,6 +1,9 @@
 /*=====================================
 			OLD STYLES
 =======================================*/
+#table {
+	background-color: #808080
+}
 .new_table #header .holder-operatop {
 	margin-top: 16px;
 }
@@ -45,6 +48,26 @@
 .filter_button:hover {
 	background-position: -56px 0;
 }
+#search_table {
+	color: #969AA0;
+	font: italic 15px "ArialRegular";
+	padding: 0px 50px 0 10px;
+	box-sizing: border-box;
+	height: 27px;
+	width: 561px;;
+	border: none;
+	-webkit-box-shadow: #c4c7c8 0 1px 2px;
+	-moz-box-shadow: #c4c7c8 0 1px 2px;
+	box-shadow: #c4c7c8 0 1px 2px;
+}
+#search_table:focus {
+	background: url(../images/button_clear.png) #fff 100% 0 no-repeat;
+	content: '';
+.qweq {
+	display: none;
+}
+}
+
 /*=========================================*/
 
 @font-face {
@@ -70,6 +93,11 @@
 	font: 11px/22px "ArialRegular";
 	margin: 0 auto;
 	width: 1280px;
+}
+.wrap {
+	height: 870px;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 .table_caption,
 .info_panel,
@@ -113,6 +141,7 @@
 	color: #111;
 	font-family: "ArialBold";
 }
+.table_caption,
 .warning_def {
 	background-color: #EDF0F2
 }
