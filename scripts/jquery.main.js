@@ -1378,6 +1378,47 @@ var pageInit = {
 //			});
 		})
 	},
+
+
+
+
+	initSearch: function(){
+		$('div.drop').each(function(){
+			var hold = $(this);
+			var button = hold.find('.filter_button');
+			var box = hold.find('.search_container');
+			var heightBox = box.innerHeight();
+			var speed = 300;
+
+			box.css({marginTop:-heightBox});
+
+			button.click(function(){
+				if(!hold.hasClass('open')){
+					hold.addClass('open');
+					box.animate({marginTop:0},{queue: false, duration: speed});
+				}
+				else{
+					hold.removeClass('open');
+					box.animate({marginTop:-heightBox},{queue: false, duration: speed});
+				}
+				return false;
+			});
+			box.hover(function(){
+				box.addClass('hovering');
+			}, function(){
+				box.removeClass('hovering');
+			});
+//			$("body").click(function(){
+//				if(!box.hasClass('hovering')){
+//					hold.removeClass('open');
+//					box.animate({marginTop:-heightBox},{queue: false, duration: speed});
+//				}
+//			});
+		})
+	},
+
+
+	
 	form: function(){
 		$('form').customForm();
 		$('.selectOptions.customSelect > div').customScrollV();
