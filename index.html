@@ -7,9 +7,35 @@
 	 <link rel="stylesheet"  href="css/table-new.css" />
 	 <link rel="stylesheet"  href="css/statistics.css" />
 
-	<script type="text/javascript" src="publicLibs/jQuery/jquery-1.10.2.min.js"></script>
-	<!--<script type="text/javascript" src="scripts/jquery.main.js"></script>-->
-	<script type="text/javascript" src="scripts/main.js"></script>
+
+
+	
+    		<script type="text/javascript">var LockValidTime = "10";</script>
+    
+		<script type="text/javascript" src="publicLibs/jQuery/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="scripts/jquery-ui-1.10.3.custom.min.js"></script>
+		<script type="text/javascript" src="publicLibs/jQuery/jgrowl/jquery.jgrowl_minimized.js"></script>
+	<script type="text/javascript" src="scripts/jquery.elastic.source.js"></script>
+	<script type="text/javascript" src="scripts/loader.js"></script>
+	<link rel="stylesheet" type="text/css" href="publicLibs/jQuery/timeentry/jquery.timeentry.css">
+	<script type="text/javascript" src="publicLibs/jQuery/timeentry/jquery.plugin.min.js"></script>
+	<script type="text/javascript" src="publicLibs/jQuery/timeentry/jquery.timeentry.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="publicLibs/select2-3.5.1/select2.css">
+    <script type="text/javascript" src="publicLibs/select2-3.5.1/select2.min.js"></script>
+    <script type="text/javascript" src="publicLibs/select2-3.5.1/select2_locale_ru.js"></script>
+
+	<!--[if lte IE 8]>
+		<script type="text/javascript" src="/scripts/PIE.js"></script>
+		<script type="text/javascript" src="/scripts/modernizr-1.7.min.js"></script>
+	<![endif]-->
+
+						
+<script type="text/javascript" src="publicLibs/jQuery/jquery.form.min.js"></script>
+		    
+	<script type="text/javascript" src="scripts/jquery.main.js"></script>
+	<script type="text/javascript" src="scripts/script.js"></script>
+    <script type="text/javascript" src="scripts/jquery.unique.js"></script>
+
 
 
 
@@ -22,176 +48,181 @@
 			<a class="add" href="#">add</a>
 			<div class="search_block">
 				<input type="text" id="search_table"  placeholder="Поиск..." alt="Поиск...">
-				<a href="#" class="filter_button">list</a>
 				<a href="#" class="search_button">search</a>
-				<div class="search_container">
-		<div class="info">
-			<div class="wrap-form">
-				<div class="filter_block">
-					<div class="double">
-						<div class="checkboxes-item">
-						<input id="primaryCB" type="checkbox" name="reportType[initial]" checked="">
-						<label for="primaryCB">Только активные</label>
-	                    </div>
-						<div class="hold-select">
-							<div class="selectArea customSelect" style="width: 204px;">
-								<a href="#" class="selectButton">
-									<span class="center">Только первичные</span>
-									<span class="right">&nbsp;</span>
-								</a>
-								<div class="disabled"></div>
+				<div class="drop_block">
+					
+						<a href="#" class="filter_button">list</a>
+						<div class="has_drop">
+						<div class="search_container">
+							<div class="info">
+								<div class="wrap-form">
+									<div class="filter_block">
+										<div class="double">
+											<div class="checkboxes-item">
+											<input id="primaryCB" type="checkbox" name="reportType[initial]" checked="">
+											<label for="primaryCB">Только активные</label>
+						                    </div>
+											<div class="hold-select">
+												<div class="selectArea customSelect" style="width: 204px;">
+													<a href="#" class="selectButton">
+														<span class="center">Только первичные</span>
+														<span class="right">&nbsp;</span>
+													</a>
+													<div class="disabled"></div>
+												</div>
+												<select class="customSelect outtaHere" name="scaleID" id="scaleID">
+													<option value="1" selected="selected">Только первичные</option>
+													<option value="2">Только вторичные</option>
+													<option value="3">Только подписанные</option>
+												</select>
+											</div>
+											<div class="hold-select">
+												<div class="selectArea customSelect" style="width: 204px;">
+													<a href="#" class="selectButton">
+														<span class="center">Только активные</span>
+														<span class="right">&nbsp;</span>
+													</a>
+													<div class="disabled"></div>
+												</div>
+												<select class="customSelect outtaHere" name="scaleID" id="scaleID">
+													<option value="1" selected="selected">Только первичные</option>
+													<option value="2">Только вторичные</option>
+													<option value="3">Только подписанные</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="filter_block">
+										<div class="double">
+											<label for="kindID">Организация</label>
+											<div class="hold-select">
+												<div class="selectArea customSelect" style="width: 504px;">
+													<a href="#" class="selectButton">
+														<span class="center">Областное государственное казенное учереждение здравоохранения</span>
+														<span class="right">&nbsp;</span>
+													</a>
+													<div class="disabled"></div>
+												</div>
+												<select class="customSelect outtaHere" name="kindID" id="kindID">
+													<option value="1" selected="selected">Областное государственное казенное учереждение здравоохранения</option>
+													<option value="2">Областное государственное казенное учереждение здравоохранения</option>
+													<option value="3">Областное государственное казенное учереждение здравоохранения</option>
+													<option value="4">Областное государственное казенное учереждение здравоохранения</option>
+												</select>
+											</div>
+										</div>
+										<div class="double">
+											<label for="datetimeEs">Временной диапазон</label>
+											<div class="hold-select">
+												<div class="selectArea customSelect" style="width: 204px;">
+													<a href="#" class="selectButton">
+														<span class="center">Только первичные</span>
+														<span class="right">&nbsp;</span>
+													</a>
+													<div class="disabled"></div>
+												</div>
+												<select class="customSelect outtaHere" name="scaleID" id="scaleID">
+													<option value="1" selected="selected">Только первичные</option>
+													<option value="2">Только вторичные</option>
+													<option value="3">Только подписанные</option>
+												</select>
+											</div>
+											<div class="checkboxes-item">
+						                        <input id="primaryCB" type="checkbox" name="reportType[initial]" checked="">
+						                        <label for="primaryCB">По настоящее время</label>
+						                    </div>
+						                </div>
+						                <div class="double">
+						                    <label for="datetimeEs"></label>
+											<div class="hold-data data_area d_inline_rel">
+												<input type="text" placeholder="" readonly="readonly" name="datetimeEs" id="datetimeEs" value="17.02.2015 / 15:47" alt="17.02.2015 / 15:47">
+												<a class="ui-datepicker-trigger" data-class="ui-datepicker-trigger" href="#date">data</a>
+											</div>
+											<div class="hold-data data_area d_inline_rel">
+												<input type="text" placeholder="" readonly="readonly" name="datetimeEs" id="datetimeEs" value="17.02.2015 / 15:47" alt="17.02.2015 / 15:47">
+												<a class="ui-datepicker-trigger" data-class="ui-datepicker-trigger" href="#date2">data</a>
+											</div>
+										</div>
+										<div class="double">
+											<label for="scaleID">Масштаб ЧС</label>
+											<div class="hold-select">
+												<div class="selectArea customSelect" style="width: 504px;">
+													<a href="#" class="selectButton">
+														<span class="center">Локальная ЧС</span>
+														<span class="right">&nbsp;</span>
+													</a>
+													<div class="disabled"></div>
+												</div>
+												<select class="customSelect outtaHere" name="scaleID" id="scaleID">
+													<option value="1" selected="selected">Локальная ЧС</option>
+													<option value="2">Муниципальная ЧС</option>
+													<option value="3">Межмуниципальная ЧС</option>
+													<option value="4">Региональная ЧС</option>
+													<option value="5">Межрегиональная ЧС</option>
+													<option value="6">Федеральная ЧС</option>
+												</select>
+											</div>
+										</div>
+										<div class="double">
+											<label for="kindID">Вид ЧС</label>
+											<div class="hold-select">
+												<div class="selectArea customSelect" style="width: 504px;">
+													<a href="#" class="selectButton">
+														<span class="center">Техногенный</span>
+														<span class="right">&nbsp;</span>
+													</a>
+													<div class="disabled"></div>
+												</div>
+												<select class="customSelect outtaHere" name="kindID" id="kindID">
+													<option value="1" selected="selected">Техногенный</option>
+													<option value="2">Природный</option>
+													<option value="3">Биолого-социальный</option>
+													<option value="4">Социальный</option>
+												</select>
+											</div>
+										</div>
+										<div class="double">
+											<label for="typeID">Тип ЧС</label>
+											<div class="hold-select">
+												<div class="selectArea customSelect" style="width: 504px;">
+													<a href="#" class="selectButton">
+														<span class="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1.1. Аварии пассажирских поездов и поездов метрополитена</span>
+														<span class="right">&nbsp;</span>
+													</a>
+													<div class="disabled" style="display: none;"></div>
+												</div>
+												<select class="customSelect outtaHere" name="typeID" id="typeID">
+													<option value="111">1. </option>
+													<option value="1" data-text="Число пораженных 10 человек и более. Число погибших 2 человека и более. Неспособность справиться с ликвидацией последствий собственными силами. ">&nbsp;&nbsp;&nbsp;&nbsp;1.1. Транспортные аварии (катастрофы)</option>
+													<option value="2" data-text="Число пораженных 10 человек и более. Число погибших 2 человека и более. Неспособность справиться с ликвидацией последствий собственными силами. " selected="selected">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1.1. Аварии пассажирских поездов и поездов метрополитена</option>
+													<option value="3" data-text="Число пораженных 10 человек и более. Число погибших 2 человека и более. Неспособность справиться с ликвидацией последствий собственными силами. ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1.2. Авиационные катастрофы</option>
+													<option value="4" data-text="Число пораженных 10 человек и более. Число погибших 2 человека и более. Неспособность справиться с ликвидацией последствий собственными силами. ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1.3. Аварии (катастрофы) на автодорогах</option>
+													<option value="5" data-text="Число пораженных 10 человек и более. Число погибших 2 человека и более. Неспособность справиться с ликвидацией последствий собственными силами. ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1.4. Аварии (катастрофы) водного транспорта</option>
+													<option value="6" data-text="Число пораженных 10 человек и более. Неспособность справиться с ликвидацией последствий собственными силами.">&nbsp;&nbsp;&nbsp;&nbsp;1.2. Пожары и взрывы (с возможным последующим горением) (здания, промпредприятия, шахты, транспорт)</option>
+													<option value="106" data-text="Число пораженных 10 человек и более. Число погибших 2 человека и более. Неспособность справиться с ликвидацией последствий собственными силами.">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2.1. - в медицинских организациях</option>
+													<option value="7" data-text="Число пораженных 10 человек и более. Число погибших 2 человека и более. Выход поражающих факторов за санитарно-защитную зону с превышением ПДК (ПДУ) в 50 раз и более. Угроза поражения населения.">&nbsp;&nbsp;&nbsp;&nbsp;1.3. Аварии с выбросом (угрозой выброса) аварийно химически опасных веществ (АХОВ)</option>
+													<option value="107" data-text="Число пораженных 10 человек и более. Число погибших 2 человека и более. Выход поражающих факторов за санитарно-защитную зону с превышением ПДК (ПДУ) в 50 раз и более. Угроза поражения населения.">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.3.1. - в медицинских организациях</option>
+													<option value="8" data-text="Число пораженных 10 человек и более. Число погибших 2 человека и более. Радиоактивное загрязнение окружающей среды вне санитарной защитной зоны 100 ПДК и более. Выброс радиоактивных веществ в 10 раз превышает суточный выброс для данной АЭС установки.">&nbsp;&nbsp;&nbsp;&nbsp;1.4. Аварии с выбросом (угрозой выброса) радиоактивных веществ (РВ)</option>
+													<option value="9" data-text="Число пораженных 10 человек и более. Любой факт заражения людей возбудителями инфекционных заболеваний 1 и 2 групп патогенности.">&nbsp;&nbsp;&nbsp;&nbsp;1.5. Аварии с выбросом (угрозой выброса) опасных биологических веществ (ОБВ)</option>
+													<option value="108" data-text="Число пораженных 10 человек и более.">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.5.1. - в медицинских организациях</option>
+													<option value="10" data-text="Число пораженных 10 человек и более. Число погибших 2 человека и более. Неспособность справиться с ликвидацией последствий собственными силами. ">&nbsp;&nbsp;&nbsp;&nbsp;1.6. Аварии на системах жизнеобеспечения: на электроэнергетических, коммунальных системах, на очистных сооружениях</option>
+													<option value="11" data-text="Число пораженных 10 человек и более. Число погибших 2 человека и более. Неспособность справиться с ликвидацией последствий собственными силами. ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.6.1. На коммунальных системах ЛПУ</option>
+													<option value="12" data-text="Число пораженных 15 человек и более. Число погибших 4 человека и более. Неспособность справиться с ликвидацией последствий собственными силами.">&nbsp;&nbsp;&nbsp;&nbsp;1.7. Аварии гидродинамические (прорывы плотин, дамб, шлюзов и т.д.)</option>
+													<option value="13" data-text="Число пораженных 15 человек и более. Число погибших 2 человека и более. Неспособность справиться с ликвидацией последствий собственными силами.">&nbsp;&nbsp;&nbsp;&nbsp;1.8. Внезапное обрушение зданий, сооружений, пород</option>
+													<option value="109" data-text="Число пораженных 15 человек и более. Число погибших 2 человека и более. Неспособность справиться с ликвидацией последствий собственными силами.">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.8.1. - в медицинских организациях</option>
+													<option value="14" data-text="Число пораженных 15 человек и более. Число погибших 4 человека и более. Неспособность справиться с ликвидацией последствий собственными силами.">&nbsp;&nbsp;&nbsp;&nbsp;1.9. Аварии на народнохозяйственных объектах, связанных с залповыми выбросами экологически вредных веществ</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="btn_wrap">
+					                    <input class="btn_go" value="Показать результаты выборки" id="FormSubmit" name="FormSubmit" type="submit">
+									</div>
+								</div>
 							</div>
-							<select class="customSelect outtaHere" name="scaleID" id="scaleID">
-								<option value="1" selected="selected">Только первичные</option>
-								<option value="2">Только вторичные</option>
-								<option value="3">Только подписанные</option>
-							</select>
-						</div>
-						<div class="hold-select">
-							<div class="selectArea customSelect" style="width: 204px;">
-								<a href="#" class="selectButton">
-									<span class="center">Только активные</span>
-									<span class="right">&nbsp;</span>
-								</a>
-								<div class="disabled"></div>
-							</div>
-							<select class="customSelect outtaHere" name="scaleID" id="scaleID">
-								<option value="1" selected="selected">Только первичные</option>
-								<option value="2">Только вторичные</option>
-								<option value="3">Только подписанные</option>
-							</select>
 						</div>
 					</div>
 				</div>
-				<div class="filter_block">
-					<div class="double">
-						<label for="kindID">Организация</label>
-						<div class="hold-select">
-							<div class="selectArea customSelect" style="width: 504px;">
-								<a href="#" class="selectButton">
-									<span class="center">Областное государственное казенное учереждение здравоохранения</span>
-									<span class="right">&nbsp;</span>
-								</a>
-								<div class="disabled"></div>
-							</div>
-							<select class="customSelect outtaHere" name="kindID" id="kindID">
-								<option value="1" selected="selected">Областное государственное казенное учереждение здравоохранения</option>
-								<option value="2">Областное государственное казенное учереждение здравоохранения</option>
-								<option value="3">Областное государственное казенное учереждение здравоохранения</option>
-								<option value="4">Областное государственное казенное учереждение здравоохранения</option>
-							</select>
-						</div>
-					</div>
-					<div class="double">
-						<label for="datetimeEs">Временной диапазон</label>
-						<div class="hold-select">
-							<div class="selectArea customSelect" style="width: 204px;">
-								<a href="#" class="selectButton">
-									<span class="center">Только первичные</span>
-									<span class="right">&nbsp;</span>
-								</a>
-								<div class="disabled"></div>
-							</div>
-							<select class="customSelect outtaHere" name="scaleID" id="scaleID">
-								<option value="1" selected="selected">Только первичные</option>
-								<option value="2">Только вторичные</option>
-								<option value="3">Только подписанные</option>
-							</select>
-						</div>
-						<div class="checkboxes-item">
-	                        <input id="primaryCB" type="checkbox" name="reportType[initial]" checked="">
-	                        <label for="primaryCB">По настоящее время</label>
-	                    </div>
-	                </div>
-	                <div class="double">
-	                    <label for="datetimeEs"></label>
-						<div class="hold-data data_area d_inline_rel">
-							<input type="text" placeholder="" readonly="readonly" name="datetimeEs" id="datetimeEs" value="17.02.2015 / 15:47" alt="17.02.2015 / 15:47">
-							<a class="ui-datepicker-trigger" data-class="ui-datepicker-trigger" href="#date">data</a>
-						</div>
-						<div class="hold-data data_area d_inline_rel">
-							<input type="text" placeholder="" readonly="readonly" name="datetimeEs" id="datetimeEs" value="17.02.2015 / 15:47" alt="17.02.2015 / 15:47">
-							<a class="ui-datepicker-trigger" data-class="ui-datepicker-trigger" href="#date">data</a>
-						</div>
-					</div>
-					<div class="double">
-						<label for="scaleID">Масштаб ЧС</label>
-						<div class="hold-select">
-							<div class="selectArea customSelect" style="width: 504px;">
-								<a href="#" class="selectButton">
-									<span class="center">Локальная ЧС</span>
-									<span class="right">&nbsp;</span>
-								</a>
-								<div class="disabled"></div>
-							</div>
-							<select class="customSelect outtaHere" name="scaleID" id="scaleID">
-								<option value="1" selected="selected">Локальная ЧС</option>
-								<option value="2">Муниципальная ЧС</option>
-								<option value="3">Межмуниципальная ЧС</option>
-								<option value="4">Региональная ЧС</option>
-								<option value="5">Межрегиональная ЧС</option>
-								<option value="6">Федеральная ЧС</option>
-							</select>
-						</div>
-					</div>
-					<div class="double">
-						<label for="kindID">Вид ЧС</label>
-						<div class="hold-select">
-							<div class="selectArea customSelect" style="width: 504px;">
-								<a href="#" class="selectButton">
-									<span class="center">Техногенный</span>
-									<span class="right">&nbsp;</span>
-								</a>
-								<div class="disabled"></div>
-							</div>
-							<select class="customSelect outtaHere" name="kindID" id="kindID">
-								<option value="1" selected="selected">Техногенный</option>
-								<option value="2">Природный</option>
-								<option value="3">Биолого-социальный</option>
-								<option value="4">Социальный</option>
-							</select>
-						</div>
-					</div>
-					<div class="double">
-						<label for="typeID">Тип ЧС</label>
-						<div class="hold-select">
-							<div class="selectArea customSelect" style="width: 504px;">
-								<a href="#" class="selectButton">
-									<span class="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1.1. Аварии пассажирских поездов и поездов метрополитена</span>
-									<span class="right">&nbsp;</span>
-								</a>
-								<div class="disabled" style="display: none;"></div>
-							</div>
-							<select class="customSelect outtaHere" name="typeID" id="typeID">
-								<option value="111">1. </option>
-								<option value="1" data-text="Число пораженных 10 человек и более. Число погибших 2 человека и более. Неспособность справиться с ликвидацией последствий собственными силами. ">&nbsp;&nbsp;&nbsp;&nbsp;1.1. Транспортные аварии (катастрофы)</option>
-								<option value="2" data-text="Число пораженных 10 человек и более. Число погибших 2 человека и более. Неспособность справиться с ликвидацией последствий собственными силами. " selected="selected">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1.1. Аварии пассажирских поездов и поездов метрополитена</option>
-								<option value="3" data-text="Число пораженных 10 человек и более. Число погибших 2 человека и более. Неспособность справиться с ликвидацией последствий собственными силами. ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1.2. Авиационные катастрофы</option>
-								<option value="4" data-text="Число пораженных 10 человек и более. Число погибших 2 человека и более. Неспособность справиться с ликвидацией последствий собственными силами. ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1.3. Аварии (катастрофы) на автодорогах</option>
-								<option value="5" data-text="Число пораженных 10 человек и более. Число погибших 2 человека и более. Неспособность справиться с ликвидацией последствий собственными силами. ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1.4. Аварии (катастрофы) водного транспорта</option>
-								<option value="6" data-text="Число пораженных 10 человек и более. Неспособность справиться с ликвидацией последствий собственными силами.">&nbsp;&nbsp;&nbsp;&nbsp;1.2. Пожары и взрывы (с возможным последующим горением) (здания, промпредприятия, шахты, транспорт)</option>
-								<option value="106" data-text="Число пораженных 10 человек и более. Число погибших 2 человека и более. Неспособность справиться с ликвидацией последствий собственными силами.">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2.1. - в медицинских организациях</option>
-								<option value="7" data-text="Число пораженных 10 человек и более. Число погибших 2 человека и более. Выход поражающих факторов за санитарно-защитную зону с превышением ПДК (ПДУ) в 50 раз и более. Угроза поражения населения.">&nbsp;&nbsp;&nbsp;&nbsp;1.3. Аварии с выбросом (угрозой выброса) аварийно химически опасных веществ (АХОВ)</option>
-								<option value="107" data-text="Число пораженных 10 человек и более. Число погибших 2 человека и более. Выход поражающих факторов за санитарно-защитную зону с превышением ПДК (ПДУ) в 50 раз и более. Угроза поражения населения.">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.3.1. - в медицинских организациях</option>
-								<option value="8" data-text="Число пораженных 10 человек и более. Число погибших 2 человека и более. Радиоактивное загрязнение окружающей среды вне санитарной защитной зоны 100 ПДК и более. Выброс радиоактивных веществ в 10 раз превышает суточный выброс для данной АЭС установки.">&nbsp;&nbsp;&nbsp;&nbsp;1.4. Аварии с выбросом (угрозой выброса) радиоактивных веществ (РВ)</option>
-								<option value="9" data-text="Число пораженных 10 человек и более. Любой факт заражения людей возбудителями инфекционных заболеваний 1 и 2 групп патогенности.">&nbsp;&nbsp;&nbsp;&nbsp;1.5. Аварии с выбросом (угрозой выброса) опасных биологических веществ (ОБВ)</option>
-								<option value="108" data-text="Число пораженных 10 человек и более.">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.5.1. - в медицинских организациях</option>
-								<option value="10" data-text="Число пораженных 10 человек и более. Число погибших 2 человека и более. Неспособность справиться с ликвидацией последствий собственными силами. ">&nbsp;&nbsp;&nbsp;&nbsp;1.6. Аварии на системах жизнеобеспечения: на электроэнергетических, коммунальных системах, на очистных сооружениях</option>
-								<option value="11" data-text="Число пораженных 10 человек и более. Число погибших 2 человека и более. Неспособность справиться с ликвидацией последствий собственными силами. ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.6.1. На коммунальных системах ЛПУ</option>
-								<option value="12" data-text="Число пораженных 15 человек и более. Число погибших 4 человека и более. Неспособность справиться с ликвидацией последствий собственными силами.">&nbsp;&nbsp;&nbsp;&nbsp;1.7. Аварии гидродинамические (прорывы плотин, дамб, шлюзов и т.д.)</option>
-								<option value="13" data-text="Число пораженных 15 человек и более. Число погибших 2 человека и более. Неспособность справиться с ликвидацией последствий собственными силами.">&nbsp;&nbsp;&nbsp;&nbsp;1.8. Внезапное обрушение зданий, сооружений, пород</option>
-								<option value="109" data-text="Число пораженных 15 человек и более. Число погибших 2 человека и более. Неспособность справиться с ликвидацией последствий собственными силами.">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.8.1. - в медицинских организациях</option>
-								<option value="14" data-text="Число пораженных 15 человек и более. Число погибших 4 человека и более. Неспособность справиться с ликвидацией последствий собственными силами.">&nbsp;&nbsp;&nbsp;&nbsp;1.9. Аварии на народнохозяйственных объектах, связанных с залповыми выбросами экологически вредных веществ</option>
-							</select>
-						</div>
-					</div>
-				</div>
-				<div class="buttons btn_wrap">
-                    <input class="btn_go" value="Показать результаты выборки" id="FormSubmit" name="FormSubmit" type="submit">
-				</div>
-			</div>
-		</div>
-	</div>
 			</div>
 			<div class="holder-operatop">
 				<div class="holder-avater">
@@ -641,5 +672,431 @@
 			</div>
 		</div>
 	</div>
+	<div class="modal" id="date">
+		<a class="close" href="#">close</a>
+		<div class="holder-date">
+			<form action="#" class="form">
+				<fieldset>
+					<div class="text">
+						<label>время:</label>
+						<input type="time" class="text-input no-clear time is-timeEntry" id="time-input" value="10:28">
+					</div>
+				</fieldset>
+			</form>
+		</div>
+		<div id="datepicker" class="hasDatepicker">
+			<div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="display: block;">
+				<div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all">
+					<a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="<Пред">
+						<span class="ui-icon ui-icon-circle-triangle-w">&lt;Пред</span>
+					</a>
+					<a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="След>">
+						<span class="ui-icon ui-icon-circle-triangle-e">След&gt;</span>
+					</a>
+					<div class="ui-datepicker-title">
+						<select class="ui-datepicker-month" data-handler="selectMonth" data-event="change">
+							<option value="0">Янв</option>
+							<option value="1">Фев</option>
+							<option value="2">Мар</option>
+							<option value="3" selected="selected">Апр</option>
+							<option value="4">Май</option>
+							<option value="5">Июн</option>
+							<option value="6">Июл</option>
+							<option value="7">Авг</option>
+							<option value="8">Сен</option>
+							<option value="9">Окт</option>
+							<option value="10">Ноя</option>
+							<option value="11">Дек</option>
+						</select>
+						<select class="ui-datepicker-year" data-handler="selectYear" data-event="change">
+							<option value="2005">2005</option>
+							<option value="2006">2006</option>
+							<option value="2007">2007</option>
+							<option value="2008">2008</option>
+							<option value="2009">2009</option>
+							<option value="2010">2010</option>
+							<option value="2011">2011</option>
+							<option value="2012">2012</option>
+							<option value="2013">2013</option>
+							<option value="2014">2014</option>
+							<option value="2015" selected="selected">2015</option>
+							<option value="2016">2016</option>
+							<option value="2017">2017</option>
+							<option value="2018">2018</option>
+							<option value="2019">2019</option>
+							<option value="2020">2020</option>
+							<option value="2021">2021</option>
+							<option value="2022">2022</option>
+							<option value="2023">2023</option>
+							<option value="2024">2024</option>
+							<option value="2025">2025</option>
+						</select>
+					</div>
+				</div>
+				<table class="ui-datepicker-calendar">
+					<thead>
+						<tr>
+							<th><span title="понедельник">Пн</span></th>
+							<th><span title="вторник">Вт</span></th>
+							<th><span title="среда">Ср</span></th>
+							<th><span title="четверг">Чт</span></th>
+							<th><span title="пятница">Пт</span></th>
+							<th class="ui-datepicker-week-end"><span title="суббота">Сб</span></th>
+							<th class="ui-datepicker-week-end"><span title="воскресенье">Вс</span></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class=" ui-datepicker-other-month " data-handler="selectDay" data-event="click" data-month="2" data-year="2015">
+								<a class="ui-state-default ui-priority-secondary" href="#">30</a>
+							</td>
+							<td class=" ui-datepicker-other-month " data-handler="selectDay" data-event="click" data-month="2" data-year="2015">
+								<a class="ui-state-default ui-priority-secondary" href="#">31</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">1</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">2</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">3</a>
+							</td>
+							<td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">4</a>
+							</td>
+							<td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">5</a>
+							</td>
+						</tr>
+						<tr>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">6</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">7</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">8</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">9</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">10</a>
+							</td>
+							<td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">11</a>
+							</td>
+							<td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">12</a>
+							</td>
+						</tr>
+						<tr>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">13</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">14</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">15</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">16</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">17</a>
+							</td>
+							<td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">18</a>
+							</td>
+							<td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">19</a>
+							</td>
+						</tr>
+						<tr>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">20</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">21</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">22</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">23</a>
+							</td>
+							<td class=" ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default ui-state-highlight ui-state-active ui-state-hover" href="#">24</a>
+							</td>
+							<td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">25</a>
+							</td>
+							<td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">26</a>
+							</td>
+						</tr>
+						<tr>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">27</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">28</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">29</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">30</a>
+							</td>
+							<td class=" ui-datepicker-other-month " data-handler="selectDay" data-event="click" data-month="4" data-year="2015">
+								<a class="ui-state-default ui-priority-secondary" href="#">1</a>
+							</td>
+							<td class=" ui-datepicker-week-end ui-datepicker-other-month " data-handler="selectDay" data-event="click" data-month="4" data-year="2015">
+								<a class="ui-state-default ui-priority-secondary" href="#">2</a>
+							</td>
+							<td class=" ui-datepicker-week-end ui-datepicker-other-month " data-handler="selectDay" data-event="click" data-month="4" data-year="2015">
+								<a class="ui-state-default ui-priority-secondary" href="#">3</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="modal" id="date2">
+		<a class="close" href="#">close</a>
+		<div class="holder-date">
+			<form action="#" class="form">
+				<fieldset>
+					<div class="text">
+						<label>время:</label>
+						<input type="time" class="text-input no-clear time is-timeEntry" id="time-input" value="10:28">
+					</div>
+				</fieldset>
+			</form>
+		</div>
+		<div id="datepicker" class="hasDatepicker">
+			<div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="display: block;">
+				<div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all">
+					<a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="<Пред">
+						<span class="ui-icon ui-icon-circle-triangle-w">&lt;Пред</span>
+					</a>
+					<a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="След>">
+						<span class="ui-icon ui-icon-circle-triangle-e">След&gt;</span>
+					</a>
+					<div class="ui-datepicker-title">
+						<select class="ui-datepicker-month" data-handler="selectMonth" data-event="change">
+							<option value="0">Янв</option>
+							<option value="1">Фев</option>
+							<option value="2">Мар</option>
+							<option value="3" selected="selected">Апр</option>
+							<option value="4">Май</option>
+							<option value="5">Июн</option>
+							<option value="6">Июл</option>
+							<option value="7">Авг</option>
+							<option value="8">Сен</option>
+							<option value="9">Окт</option>
+							<option value="10">Ноя</option>
+							<option value="11">Дек</option>
+						</select>
+						<select class="ui-datepicker-year" data-handler="selectYear" data-event="change">
+							<option value="2005">2005</option>
+							<option value="2006">2006</option>
+							<option value="2007">2007</option>
+							<option value="2008">2008</option>
+							<option value="2009">2009</option>
+							<option value="2010">2010</option>
+							<option value="2011">2011</option>
+							<option value="2012">2012</option>
+							<option value="2013">2013</option>
+							<option value="2014">2014</option>
+							<option value="2015" selected="selected">2015</option>
+							<option value="2016">2016</option>
+							<option value="2017">2017</option>
+							<option value="2018">2018</option>
+							<option value="2019">2019</option>
+							<option value="2020">2020</option>
+							<option value="2021">2021</option>
+							<option value="2022">2022</option>
+							<option value="2023">2023</option>
+							<option value="2024">2024</option>
+							<option value="2025">2025</option>
+						</select>
+					</div>
+				</div>
+				<table class="ui-datepicker-calendar">
+					<thead>
+						<tr>
+							<th><span title="понедельник">Пн</span></th>
+							<th><span title="вторник">Вт</span></th>
+							<th><span title="среда">Ср</span></th>
+							<th><span title="четверг">Чт</span></th>
+							<th><span title="пятница">Пт</span></th>
+							<th class="ui-datepicker-week-end"><span title="суббота">Сб</span></th>
+							<th class="ui-datepicker-week-end"><span title="воскресенье">Вс</span></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class=" ui-datepicker-other-month " data-handler="selectDay" data-event="click" data-month="2" data-year="2015">
+								<a class="ui-state-default ui-priority-secondary" href="#">30</a>
+							</td>
+							<td class=" ui-datepicker-other-month " data-handler="selectDay" data-event="click" data-month="2" data-year="2015">
+								<a class="ui-state-default ui-priority-secondary" href="#">31</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">1</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">2</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">3</a>
+							</td>
+							<td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">4</a>
+							</td>
+							<td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">5</a>
+							</td>
+						</tr>
+						<tr>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">6</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">7</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">8</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">9</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">10</a>
+							</td>
+							<td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">11</a>
+							</td>
+							<td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">12</a>
+							</td>
+						</tr>
+						<tr>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">13</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">14</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">15</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">16</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">17</a>
+							</td>
+							<td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">18</a>
+							</td>
+							<td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">19</a>
+							</td>
+						</tr>
+						<tr>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">20</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">21</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">22</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">23</a>
+							</td>
+							<td class=" ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default ui-state-highlight ui-state-active ui-state-hover" href="#">24</a>
+							</td>
+							<td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">25</a>
+							</td>
+							<td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">26</a>
+							</td>
+						</tr>
+						<tr>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">27</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">28</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">29</a>
+							</td>
+							<td class=" " data-handler="selectDay" data-event="click" data-month="3" data-year="2015">
+								<a class="ui-state-default" href="#">30</a>
+							</td>
+							<td class=" ui-datepicker-other-month " data-handler="selectDay" data-event="click" data-month="4" data-year="2015">
+								<a class="ui-state-default ui-priority-secondary" href="#">1</a>
+							</td>
+							<td class=" ui-datepicker-week-end ui-datepicker-other-month " data-handler="selectDay" data-event="click" data-month="4" data-year="2015">
+								<a class="ui-state-default ui-priority-secondary" href="#">2</a>
+							</td>
+							<td class=" ui-datepicker-week-end ui-datepicker-other-month " data-handler="selectDay" data-event="click" data-month="4" data-year="2015">
+								<a class="ui-state-default ui-priority-secondary" href="#">3</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="selectOptions customSelect"><div style="position: relative; overflow: hidden; height: 200px;"><div class="scroll-content" style="position: absolute; top: -422px; left: 0px; z-index: 1; height: auto;"><div class="scroll-hold" style="padding-right: 24px;"><ul><li data-value="111"><a href="#">1. </a></li><li data-value="1"><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;1.1. Транспортные аварии (катастрофы)</a><div class="tooltip-select">Число пораженных 10 человек и более.
+Число погибших 2 человека и более.
+Неспособность справиться с ликвидацией последствий собственными силами. </div></li><li data-value="2" class=""><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1.1. Аварии пассажирских поездов и поездов метрополитена</a><div class="tooltip-select">Число пораженных 10 человек и более.
+Число погибших 2 человека и более.
+Неспособность справиться с ликвидацией последствий собственными силами. </div></li><li data-value="3"><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1.2. Авиационные катастрофы</a><div class="tooltip-select">Число пораженных 10 человек и более.
+Число погибших 2 человека и более.
+Неспособность справиться с ликвидацией последствий собственными силами. </div></li><li data-value="4"><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1.3. Аварии (катастрофы) на автодорогах</a><div class="tooltip-select">Число пораженных 10 человек и более.
+Число погибших 2 человека и более.
+Неспособность справиться с ликвидацией последствий собственными силами. </div></li><li data-value="5"><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.1.4. Аварии (катастрофы) водного транспорта</a><div class="tooltip-select">Число пораженных 10 человек и более.
+Число погибших 2 человека и более.
+Неспособность справиться с ликвидацией последствий собственными силами. </div></li><li data-value="6"><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;1.2. Пожары и взрывы (с возможным последующим горением) (здания, промпредприятия, шахты, транспорт)</a><div class="tooltip-select">Число пораженных 10 человек и более.
+Число погибших 2 человека и более.
+Неспособность справиться с ликвидацией последствий собственными силами.</div></li><li data-value="106"><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.2.1. - в медицинских организациях</a><div class="tooltip-select">Число пораженных 10 человек и более.
+Число погибших 2 человека и более.
+Неспособность справиться с ликвидацией последствий собственными силами.</div></li><li data-value="7"><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;1.3. Аварии с выбросом (угрозой выброса) аварийно химически опасных веществ (АХОВ)</a><div class="tooltip-select">Число пораженных 10 человек и более.
+Число погибших 2 человека и более.
+Выход поражающих факторов за санитарно-защитную зону с превышением ПДК (ПДУ) в 50 раз и более.
+Угроза поражения населения.</div></li><li data-value="107"><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.3.1. - в медицинских организациях</a><div class="tooltip-select">Число пораженных 10 человек и более.
+Число погибших 2 человека и более.
+Выход поражающих факторов за санитарно-защитную зону с превышением ПДК (ПДУ) в 50 раз и более.
+Угроза поражения населения.</div></li><li data-value="8"><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;1.4. Аварии с выбросом (угрозой выброса) радиоактивных веществ (РВ)</a><div class="tooltip-select">Число пораженных 10 человек и более. 
+Число погибших 2 человека и более.
+Радиоактивное загрязнение окружающей среды вне санитарной защитной зоны 100 ПДК и более.
+Выброс радиоактивных веществ в 10 раз превышает суточный выброс для данной АЭС установки.</div></li><li data-value="9"><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;1.5. Аварии с выбросом (угрозой выброса) опасных биологических веществ (ОБВ)</a><div class="tooltip-select">Число пораженных 10 человек и более.
+Любой факт заражения людей возбудителями инфекционных заболеваний 1 и 2 групп патогенности.</div></li><li data-value="108"><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.5.1. - в медицинских организациях</a><div class="tooltip-select">Число пораженных 10 человек и более.</div></li><li data-value="10"><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;1.6. Аварии на системах жизнеобеспечения: на электроэнергетических, коммунальных системах, на очистных сооружениях</a><div class="tooltip-select">Число пораженных 10 человек и более.
+Число погибших 2 человека и более.
+Неспособность справиться с ликвидацией последствий собственными силами. </div></li><li data-value="11"><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.6.1. На коммунальных системах ЛПУ</a><div class="tooltip-select">Число пораженных 10 человек и более.
+Число погибших 2 человека и более.
+Неспособность справиться с ликвидацией последствий собственными силами. </div></li><li data-value="12" class="selected"><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;1.7. Аварии гидродинамические (прорывы плотин, дамб, шлюзов и т.д.)</a><div class="tooltip-select">Число пораженных 15 человек и более.
+Число погибших 4 человека и более.
+Неспособность справиться с ликвидацией последствий собственными силами.</div></li><li data-value="13"><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;1.8. Внезапное обрушение зданий, сооружений, пород</a><div class="tooltip-select">Число пораженных 15 человек и более.
+Число погибших 2 человека и более.
+Неспособность справиться с ликвидацией последствий собственными силами.</div></li><li data-value="109"><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.8.1. - в медицинских организациях</a><div class="tooltip-select">Число пораженных 15 человек и более.
+Число погибших 2 человека и более.
+Неспособность справиться с ликвидацией последствий собственными силами.</div></li><li data-value="14"><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;1.9. Аварии на народнохозяйственных объектах, связанных с залповыми выбросами экологически вредных веществ</a><div class="tooltip-select">Число пораженных 15 человек и более.
+Число погибших 4 человека и более.
+Неспособность справиться с ликвидацией последствий собственными силами.</div></li></ul></div></div><div class="vscroll-bar" style="position: absolute; top: 0px; right: 0px; z-index: 2; width: 24px; height: 200px; overflow: hidden;">	<div class="scroll-up" style="width: 24px; height: 24px; overflow: hidden; cursor: pointer;"></div>	<div class="scroll-line" style="position: relative; width: 24px; height: 200px; overflow: hidden;">		<div class="scroll-slider" style="position: absolute; top: 136px; left: 0px; width: 24px; height: 64px; overflow: hidden; cursor: pointer;">			<div class="scroll-slider-c"></div>		</div>	</div>	<div class="scroll-down" style="width: 24px; height: 24px; overflow: hidden; cursor: pointer;"></div></div></div></div>
+
 </body>
 </html>

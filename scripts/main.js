@@ -3,11 +3,10 @@ jQuery(document).ready(function(){
 });
 	var pageInit = {
 		init: function(){
-			this.initSearch();
+			this.initSearchTable();
 		},
-		initSearch: function(){
-			// console.log (hold);
-			$('div.search_block').each(function(){
+		initSearchTable: function(){
+			$('div.drop_block').each(function(){
 				var hold = $(this);
 				var button = hold.find('.filter_button');
 				var box = hold.find('.search_container');

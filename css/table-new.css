@@ -285,3 +285,18 @@
 	border: none;
 	padding-left: 10px;
 }
+.drop_block {
+  margin: -28px 0 0;
+  height: 28px;
+}
+.drop_block .has_drop {
+  margin-top: 10px;
+  position: absolute;
+  top: 32px;
+  left: 0;
+  width: 863px;
+  overflow: hidden;
+  -webkit-box-shadow: #aaa 0 1px 1px;
+  -moz-box-shadow: #aaa 0 1px 1px;
+  box-shadow: #aaa 0 1px 1px;
+}

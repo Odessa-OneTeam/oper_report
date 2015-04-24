@@ -1015,11 +1015,12 @@ var pageInit = {
 		this.form();
 		this.datepicker();
 		this.initSearch();
+		this.initSearchTable();
 		this.initElastic();
         this.autoCommentHeight();
 		this.initOpen();
 		this.checkPeople();
-		this.simpleboxlink()
+		this.simpleboxlink();
 		//this.index();
 		this.tooltip();
 		this.time();
@@ -1378,47 +1379,35 @@ var pageInit = {
 //			});
 		})
 	},
+	initSearchTable: function(){
+			$('div.drop_block').each(function(){
+				var hold = $(this);
+				var button = hold.find('.filter_button');
+				var box = hold.find('.search_container');
+				console.log (hold);
+				var heightBox = box.innerHeight();
+				var speed = 300;
 
+				box.css({marginTop:-heightBox});
 
-
-
-	initSearch: function(){
-		$('div.drop').each(function(){
-			var hold = $(this);
-			var button = hold.find('.filter_button');
-			var box = hold.find('.search_container');
-			var heightBox = box.innerHeight();
-			var speed = 300;
-
-			box.css({marginTop:-heightBox});
-
-			button.click(function(){
-				if(!hold.hasClass('open')){
-					hold.addClass('open');
-					box.animate({marginTop:0},{queue: false, duration: speed});
-				}
-				else{
-					hold.removeClass('open');
-					box.animate({marginTop:-heightBox},{queue: false, duration: speed});
-				}
-				return false;
-			});
-			box.hover(function(){
-				box.addClass('hovering');
-			}, function(){
-				box.removeClass('hovering');
-			});
-//			$("body").click(function(){
-//				if(!box.hasClass('hovering')){
-//					hold.removeClass('open');
-//					box.animate({marginTop:-heightBox},{queue: false, duration: speed});
-//				}
-//			});
-		})
+				button.click(function(){
+					if(!hold.hasClass('open')){
+						hold.addClass('open');
+						box.animate({marginTop:0},{queue: false, duration: speed});
+					}
+					else{
+						hold.removeClass('open');
+						box.animate({marginTop:-heightBox},{queue: false, duration: speed});
+					}
+					return false;
+				});
+				box.hover(function(){
+					box.addClass('hovering');
+				}, function(){
+					box.removeClass('hovering');
+				});
+			})
 	},
-
-
-	
 	form: function(){
 		$('form').customForm();
 		$('.selectOptions.customSelect > div').customScrollV();
@@ -1433,8 +1422,23 @@ var pageInit = {
 			var box = $(link.attr('href'));
 			var time = box.find('input#time-input');
 			var input = hold.find('input:text');
+			var test = $('#datepicker')
 			var picker = $('#datepicker').datepicker({
-				closeText:"Закрыть",prevText:"&#x3c;Пред",nextText:"След&#x3e;",currentText:"Сегодня",monthNames:["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"],monthNamesShort:["Янв","Фев","Мар","Апр","Май","Июн","Июл","Авг","Сен","Окт","Ноя","Дек"],dayNames:["воскресенье","понедельник","вторник","среда","четверг","пятница","суббота"],dayNamesShort:["вск","пнд","втр","срд","чтв","птн","сбт"],dayNamesMin:["Вс","Пн","Вт","Ср","Чт","Пт","Сб"],weekHeader:"Нед",dateFormat:"dd.mm.yy",firstDay:1,isRTL:!1,showMonthAfterYear:!1,yearSuffix:"",
+				closeText:"Закрыть",
+				prevText:"&#x3c;Пред",
+				nextText:"След&#x3e;",
+				currentText:"Сегодня",
+				monthNames:["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"],
+				monthNamesShort:["Янв","Фев","Мар","Апр","Май","Июн","Июл","Авг","Сен","Окт","Ноя","Дек"],
+				dayNames:["воскресенье","понедельник","вторник","среда","четверг","пятница","суббота"],
+				dayNamesShort:["вск","пнд","втр","срд","чтв","птн","сбт"],
+				dayNamesMin:["Вс","Пн","Вт","Ср","Чт","Пт","Сб"],
+				weekHeader:"Нед",
+				dateFormat:"dd.mm.yy",
+				firstDay:1,
+				isRTL:!1,
+				showMonthAfterYear:!1,
+				yearSuffix:"",
 				showOtherMonths: true,
 				selectOtherMonths: true,
 				changeMonth: true,
@@ -2100,7 +2104,7 @@ return this.each(function(){
 				scrollSlider.css('top', _top);
 				scrollContent.css('top', -_top*slider_f);
 			};
-			this.scrollResize = function(){
+			this.scrollResize = function() {
 				box_h = _box.height();
 				cont_h = scrollContent.height();
 				if(box_h < cont_h){
@@ -2136,8 +2140,7 @@ return this.each(function(){
 				if(_box.is(':visible') && cont_h != scrollContent.height()) _box.get(0).scrollResize();
 			}, 200);
 
-		}
-		else{
+		} else {
 			this.scrollResize();
 		};
 	};
