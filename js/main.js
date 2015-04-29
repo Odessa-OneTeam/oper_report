@@ -8,7 +8,7 @@ jQuery(document).ready(function(){
 		initSearchTable: function(){
 			$('div.drop_block').each(function(){
 				var hold = $(this);
-				var button = hold.find('.filter_button');
+				var button = hold.find('#search-filter');
 				var box = hold.find('.search_container');
 				console.log (hold);
 				var heightBox = box.innerHeight();

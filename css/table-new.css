@@ -1,93 +1,82 @@
 /*=====================================
 			OLD STYLES
 =======================================*/
-#table {
-	background-color: #808080
+.mailbox {
+	background: #808080
 }
-.new_table #header .holder-operatop {
-	margin-top: 16px;
-}
-.new_table #header {
-	height: 60px;
-	border-bottom: 2px solid #ABABAB;
-	margin: 0;
- }
- .add {
-	position: absolute;
-	top: 0;
-	left: 0;
-	background: url(../images/bg-add.gif) no-repeat 0 0;
-	width: 64px;
-	height: 64px;
-	text-indent: -9999px;
-	overflow: hidden;
-}
-.add:hover {
-	background-position: -64px 0;
-}
-.search_block {
-	position: absolute;
-	top: 18px;
-	left: 160px;
-	height: 28px;
-	width: 671px;
-}
-.filter_button,
-.search_button {
-	background: url(../images/button_search.png) no-repeat 0 0;
-	float: right;
-	height: 100%;
-	width: 55px;
-	text-indent: -9999px;
-	overflow: hidden;
-}
-.filter_button {
-	background: url(../images/button_filter.png) no-repeat 0 0;
-}
-.search_button:hover,
-.filter_button:hover {
-	background-position: -56px 0;
-}
-#search_table {
-	color: #969AA0;
-	font: italic 15px "ArialRegular";
-	padding: 0px 50px 0 10px;
-	box-sizing: border-box;
-	height: 27px;
-	width: 561px;;
-	border: none;
-	-webkit-box-shadow: #c4c7c8 0 1px 2px;
-	-moz-box-shadow: #c4c7c8 0 1px 2px;
-	box-shadow: #c4c7c8 0 1px 2px;
-}
-#search_table:focus {
-	background: url(../images/button_clear.png) #fff 100% 0 no-repeat;
-	content: '';
-}
+	#header.mailbox__header {
+		height: 60px;
+		border-bottom: 2px solid #ABABAB;
+		margin: 0
+	}
+		.mailbox__header .holder-operatop {
+			margin-top: 16px
+		}
+		.mailbox__add {
+			position: absolute;
+			background: url(../images/bg-add.gif) no-repeat 0 0;
+			width: 64px;
+			height: 64px;
+			text-indent: -9999px;
+			overflow: hidden
+		}
+		.mailbox__add:hover {
+			background-position: -64px 0
+		}
+
+
+		.mailbox__header .search {
+			position: absolute;
+			top: 18px;
+			left: 160px;
+			height: 28px;
+			width: 671px
+		}
+			.mailbox__header .search__input {
+				color: #969AA0;
+				font: italic 15px Arial;
+				padding: 0 50px 0 10px;
+				height: 27px;
+				width: 561px;;
+				border: none;
+				-webkit-box-shadow: #c4c7c8 0 1px 2px;
+				-moz-box-shadow: #c4c7c8 0 1px 2px;
+				box-shadow: #c4c7c8 0 1px 2px;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box
+			}
+
+			.mailbox__header .search__input:focus {
+				background: url(../images/button_clear.png) #fff 100% 0 no-repeat;
+				content: '';
+			}
+
+		.mailbox__header .search__btn {
+			background-repeat: no-repeat;
+			background-position: 0 0;
+			float: right;
+			height: 100%;
+			width: 55px;
+			text-indent: -9999px;
+			overflow: hidden
+		}
+		.mailbox__header .search__btn--search {
+			background: url(../images/button_search.png)
+			
+		}
+		.mailbox__header .search__btn--filter {
+			background: url(../images/button_filter.png)
+		}
+		.mailbox__header .search__btn:hover {
+			background-position: -56px 0
+		}
+
 
 /*=========================================*/
 
-@font-face {
-    font-family: "ArialRegular";
-    src: url("../fonts/ArialRegular/ArialRegular.eot");
-    src: url("../fonts/ArialRegular/ArialRegular.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/ArialRegular/ArialRegular.woff") format("woff"),
-    url("../fonts/ArialRegular/ArialRegular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-@font-face {
-    font-family: "ArialBold";
-    src: url("../fonts/ArialBold/ArialBold.eot");
-    src: url("../fonts/ArialBold/ArialBold.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/ArialBold/ArialBold.woff") format("woff"),
-    url("../fonts/ArialBold/ArialBold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
 .new_table {
-	font: 11px/22px "ArialRegular";
+	font: 11px/22px Arial;
 	margin: 0 auto;
 	width: 1280px;
 }
@@ -136,7 +125,8 @@
 .warning_red .descr_tb,
 .caption_td_name {
 	color: #111;
-	font-family: "ArialBold";
+  	font-family: Arial;
+  	font-weight: bold;
 }
 .search_container,
 .table_caption,
@@ -219,7 +209,8 @@
 }
 .caption_td_name,
 .date_tb span {
-	font-family: "ArialBold";
+  	font-family: Arial;
+  	font-weight: bold;
 }
 
 
@@ -272,7 +263,7 @@
 }
 .d_inline_rel {
 	display: inline-block;
-	  position: relative;
+	position: relative;
 }
 .data_area {
 	-webkit-box-shadow: #c4c7c8 0 1px 2px;

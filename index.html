@@ -3,33 +3,27 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	 <link rel="stylesheet"  href="css/all.css" />
-	 <link rel="stylesheet"  href="css/table-new.css" />
-	 <link rel="stylesheet"  href="css/statistics.css" />
 
-
-
+	<link rel="stylesheet" href="css/all.css" />
+	<link rel="stylesheet" href="css/table-new.css" />
+	<link rel="stylesheet" href="css/statistics.css" />
 
 	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
 	<script type="text/javascript" src="js/jquery.elastic.source.js"></script>
 	<script type="text/javascript" src="js/jquery.main.js"></script>
-
-
-
-
-
 </head>
-<body id="table">
+<body class="mailbox">
 	<div class="new_table">
-		<header id="header">
-			<a class="add" href="#">add</a>
-			<div class="search_block">
-				<input type="text" id="search_table"  placeholder="Поиск..." alt="Поиск...">
-				<a href="#" class="search_button">search</a>
+		<header id="header" class="mailbox__header">
+			<a href="#" class="mailbox__add">add</a>
+
+			<div class="search">
+				<input type="text" class="search__input" placeholder="Поиск..." alt="Поиск...">
+				<a href="#" class="search__btn search__btn--search">search</a>
+
 				<div class="drop_block">
-					
-						<a href="#" class="filter_button">list</a>
+						<a href="#" class="search__btn search__btn--filter filter_button">list</a>
 						<div class="has_drop">
 						<div class="search_container">
 						<form action="#" class="form">
