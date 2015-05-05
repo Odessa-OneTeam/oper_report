@@ -265,9 +265,6 @@
 /*================================
 			FORM
 ==================================*/
-.mailbox .form {
-	background: url(../images/icons/close.png) no-repeat 0 3px;
-}
 
 .search_container {
 	width: 960px;
@@ -346,12 +343,14 @@ left: 470px; */
 	right: -2px
 }
 .form-close {
-	float: right;
-  background: url(../images/bg-add.gif) no-repeat 0 0;
-  width: 64px;
-  height: 64px;
-  text-indent: -9999px;
-  overflow: hidden;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	background: url(../images/icons/form_close.png) no-repeat 0 0;
+	width: 9px;
+	height: 9px;
+	text-indent: -9999px;
+	overflow: hidden;
 }
 
 
