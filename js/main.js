@@ -1,4 +1,8 @@
 jQuery(document).ready(function(){
+	$(".test1").select2({ 
+	placeholder: "Select a state",
+	allowClear: true
+});
 	pageInit.init();
 });
 	var pageInit = {

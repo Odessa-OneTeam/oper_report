@@ -1025,6 +1025,7 @@ var pageInit = {
 		this.tooltip();
 		this.time();
 		this.scrollHeight();
+		
 	},
 	scrollHeight: function(){
 		$('#map > .holder-post').each(function(){

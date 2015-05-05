@@ -7,11 +7,17 @@
 	<link rel="stylesheet" href="css/all.css" />
 	<link rel="stylesheet" href="css/table-new.css" />
 	<link rel="stylesheet" href="css/statistics.css" />
+	
+	<link rel="stylesheet" href="js/select2-3.5.1/select2-bootstrap.css" />
+	<link rel="stylesheet" href="js/select2-3.5.1/select2.css" />
 
+	
 	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script type="text/javascript" src="js/select2-3.5.1/select2.min.js"></script>
 	<script type="text/javascript" src="js/jquery.elastic.source.js"></script>
 	<script type="text/javascript" src="js/jquery.main.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body class="mailbox">
 	<div class="new_table">
@@ -27,6 +33,7 @@
 						<div class="has_drop">
 						<div class="search_container">
 						<form action="#" class="form">
+							<a class="form-close" href="#">close</a>
 							<div class="info">
 								<div class="wrap-form">
 									<div class="filter_block">
@@ -36,14 +43,14 @@
 											<label for="primaryCB">Только активные</label>
 						                    </div>
 											<div class="hold-select">
-												<select class="customSelect">
+												<select class="customSelect smal-select">
 													<option value="1" selected="selected">Только первичные</option>
 													<option value="2">Только вторичные</option>
 													<option value="3">Только подписанные</option>
 												</select>
 											</div>
 											<div class="hold-select">
-												<select class="customSelect">
+												<select class="customSelect smal-select">
 													<option value="1" selected="selected">Только первичные</option>
 													<option value="2">Только вторичные</option>
 													<option value="3">Только подписанные</option>
@@ -66,7 +73,7 @@
 										<div class="double">
 											<label for="datetimeEs">Временной диапазон</label>
 											<div class="hold-select">
-												<select class="customSelect">
+												<select class="customSelect smal-select">
 													<option value="1" selected="selected">Только первичные</option>
 													<option value="2">Только вторичные</option>
 													<option value="3">Только подписанные</option>
@@ -79,11 +86,11 @@
 						                </div>
 						                <div class="double">
 						                    <label for="datetimeEs"></label>
-											<div class="hold-data">
+											<div class="hold-data smal-select">
 												<input type="text" placeholder="" readonly="readonly" />
 												<a class="ui-datepicker-trigger" data-class="ui-datepicker-trigger" href="#date">data</a>
 											</div>
-											<div class="hold-data">
+											<div class="hold-data smal-select">
 												<input type="text" placeholder="" readonly="readonly" />
 													<a class="ui-datepicker-trigger" data-class="ui-datepicker-trigger" href="#date2">data</a>
 											</div>
@@ -162,8 +169,8 @@
 			</div>
 		</header>
 		<div class="info_search">
-			<div class="table_cell search_msg"><span class="ico_warn"></span>Найдено донесений: 20</div>
-			<div class="table_cell search_total">Сбросить выборку</div>
+			<div class="search_msg"><span class="ico_warn"></span>Найдено донесений: 20</div>
+			<div class="search_total"><a href="#">Сбросить выборку</a></div>
 		</div>
 		<div class="info_panel">
 			<div class="table_cell info_msg"><span class="ico_warn"></span>Непроверенных донесений: 2</div>
@@ -817,7 +824,36 @@
 			</div>
 		</div>
 	</div>
-	
+	<select class="test1">
+  <option value="AL">Alabama</option>
+  <option value="WY">Wyoming</option>
+  <option value="WY">Wyoming</option>
+  <option value="WY">Wyoming</option>
+  <option value="WY">Wyoming</option>
+  <option value="WY">Wyoming</option>
+  <option value="WY">Wyoming</option>
+    <option value="AL">Alabama</option>
+  <option value="WY">Wyoming</option>
+  <option value="WY">Wyoming</option>
+  <option value="WY">Wyoming</option>
+  <option value="WY">Wyoming</option>
+  <option value="WY">Wyoming</option>
+  <option value="WY">Wyoming</option>
+    <option value="AL">Alabama</option>
+  <option value="WY">Wyoming</option>
+  <option value="WY">Wyoming</option>
+  <option value="WY">Wyoming</option>
+  <option value="WY">Wyoming</option>
+  <option value="WY">Wyoming</option>
+  <option value="WY">Wyoming</option>
+    <option value="AL">Alabama</option>
+  <option value="WY">Wyoming</option>
+  <option value="WY">Wyoming</option>
+  <option value="WY">Wyoming</option>
+  <option value="WY">Wyoming</option>
+  <option value="WY">Wyoming</option>
+  <option value="WY">Wyoming</option>
+</select>
 
 </body>
 </html>
