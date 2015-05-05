@@ -122,7 +122,10 @@
 		}
 		.mailbox__header .search__btn--search {
 			background: url(../images/button_search.png)
-			
+		}
+		.mailbox__header .open .search__btn--filter {
+			background: url(../images/icons/drop_open.png) 0 0;
+			height: 48px;
 		}
 		.mailbox__header .search__btn--filter {
 			background: url(../images/button_filter.png)
@@ -249,22 +252,30 @@
 	display: inline-block;
 	font-size: 12px
 }
+.search_total a {
+	color: #B9BCC0;
+	text-decoration: none;
+}
 .search_total {
   float: right;
   text-transform: uppercase;
   background: url(../images/icons/close.png) no-repeat 0 3px;
-  margin: 6px 373px 0 0;
+  margin: 6px 215px 0 0;
   padding: 0 25px;
 }
 .search_total:hover {
 	background: url(../images/icons/close.png) no-repeat 0 -34px;
 }
-
+.search_msg {
+	margin: 6px;
+	text-transform: uppercase;
+}
 
 
 /*================================
 			FORM
 ==================================*/
+
 
 .search_container {
 	width: 960px;
@@ -328,7 +339,7 @@ left: 470px; */
 .drop_block .has_drop {
 	position: absolute;
 	width: 1100px;
-	top: 32px;
+	top: 36px;
   	margin-top: 10px;
 	overflow: hidden;
 }
@@ -345,7 +356,7 @@ left: 470px; */
 .form-close {
 	position: absolute;
 	right: 10px;
-	top: 10px;
+	top: 40px;
 	background: url(../images/icons/form_close.png) no-repeat 0 0;
 	width: 9px;
 	height: 9px;
