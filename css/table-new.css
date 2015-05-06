@@ -363,5 +363,12 @@ left: 470px; */
 	text-indent: -9999px;
 	overflow: hidden;
 }
-
+.info-null {
+  float: left;
+  display: inline-block;
+  border-right: 1px solid #B9BCC0;
+  height: 18px;
+  margin-top: 6px;
+  width: 555px;
+}
 

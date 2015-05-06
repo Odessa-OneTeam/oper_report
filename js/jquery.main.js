@@ -1021,11 +1021,12 @@ var pageInit = {
 		this.initOpen();
 		this.checkPeople();
 		this.simpleboxlink();
+		this.resetClick();
 		//this.index();
 		this.tooltip();
 		this.time();
 		this.scrollHeight();
-		
+
 	},
 	scrollHeight: function(){
 		$('#map > .holder-post').each(function(){
@@ -1409,6 +1410,24 @@ var pageInit = {
 				});
 			})
 	},
+	resetClick: function(){
+			$('div.drop_block').each(function(){
+				var hold = $(this);
+				var button = hold.find('.reset_button');
+
+			button.click(function(e) {
+				console.log("reset");
+            e.preventDefault();
+            $(this).find("textarea").each(function() {
+                $(this).val('');
+            });
+            $(this).find("input[type='text']").each(function() {
+                $(this).val('');
+            })
+        });
+		})
+		},
+
 	form: function(){
 		$('form').customForm();
 		$('.selectOptions.customSelect > div').customScrollV();
