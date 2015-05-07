@@ -1,0 +1,62 @@
+.error__ {color:#c00; display:none}
+.generated {color: blue !important;}
+
+.btn.wider {
+	background-position: 290px;
+	width: 336px;
+}
+
+.btn.minzdrav {
+    width: 420px;
+    background-position: 375px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.locked-attention {
+    position:fixed;
+    left:0;
+    top:0px;
+    width: 50px;
+    height: 50px;
+    background: url('/images/attention_small.png') no-repeat;
+}
+
+
+div.hold-data2 input {
+    font-size: 12px;
+}
+
+.smallSelect .selectButton .center {
+    font-size: 10px;
+}
+
+.selectOptions.smallSelect ul li a, .custom-scroll ul li a {
+    font-size: 10px;
+}
+
+.help .result {
+    margin-bottom: 25px;
+}
+
+
+/*.select2-container-active .select2-choice, .select2-container-active .select2-choices {
+   box-shadow: 0 0 3px #22b2fb;
+}*/
+
+#multipane-form #lockedInfo {
+    padding: 0 0 27px 32px;
+    width: 1217px;
+}
+
+#multipane-form #lockedInfo h1 {
+    width: 100%;
+    padding-right: 0;
+    /*margin-right: 0;*/
+}
+
+#multipane-form .check-people {
+    z-index: auto;
+}

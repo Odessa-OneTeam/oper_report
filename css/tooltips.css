@@ -1,0 +1,54 @@
+/* =================================================
+					TOOLTIPS
+=================================================== */
+.tooltip {
+    position: absolute;
+    width: 527px;
+    padding: 4px 7px 38px 14px;
+    z-index: 20;
+    border: 1px solid #fff;
+    -webkit-box-shadow: #737880 0 1px 2px;
+    -moz-box-shadow: #737880 0 1px 2px;
+    box-shadow: #737880 0 1px 2px;
+    margin: 21px 0 0
+}
+.tooltip--open {
+    top: -5px
+}
+    .tooltip .top-tool {
+        background: url(../images/bg-top.png) no-repeat 0 0;
+        width: 16px;
+        position: absolute;
+        top: -9px
+    }
+.red .tooltip {
+    background: #f82900;
+    margin-left: -25px
+}
+    .red .tooltip .top-tool {
+        left: 46px
+    }
+.orange .tooltip {
+    background: #f87c00;
+    margin-left: -155px
+}
+    .orange .tooltip .top-tool{
+        background-position: -16px 0;
+        left: 178px
+    }
+.yellow .tooltip {
+    background: #deb900;
+    margin-left: -280px
+}
+    .yellow .tooltip .top-tool{
+        background-position: -32px 0;
+        left: 304px
+    }
+.green .tooltip {
+    background: #a4c500;
+    margin-left: -405px
+}
+    .green .tooltip .top-tool{
+        background-position: -48px 0;
+        left: 430px
+    }

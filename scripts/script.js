@@ -9,7 +9,7 @@ var creatingUpdate = {
 $(document).ready(function(){
 
     // отключить звук
-    $('#nav').each(function() {
+    $('.index .holder-operatop').each(function() {
         var $hold = $(this);
         if (!globalOptions.soundEnabled)
             $('#imageMuteSound').show();
@@ -201,7 +201,7 @@ $(document).ready(function(){
         });
 
         // reset stat form
-        $('#stat_form .reset-filter-block a').on('click', function() {
+        $('#stat_form .reset-filter a').on('click', function() {
             $('#stat_form').get(0).reset();
             $('#stat_form select').trigger('change');
             $('#stat_form').find('span.with-eye').empty().removeClass('with-eye').addClass('without-eye');
