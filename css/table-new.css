@@ -8,39 +8,40 @@
 .info_search {
 	background-color: #737880
 }
-.table_cell {
+.table__cell {
 	color: #737880
 }
 .search_total,
 .search_msg {
 	color: #B9BCC0
 }
-.table_row:hover {
+.mCSB_1_scrollbar.mCS-oper-report,
+.table__row:hover {
 	background: #FFF
 }
 .search_container,
 .table_caption,
-.warning_def {
+.table__row--warning_def {
 	background: #EDF0F2
 }
-.warning_blue {
+.table__row--warning_blue {
 	background: #D5E9F3
 }
-.info_tb_red {
+.table__cell--info_red {
 	border-left: 8px solid #d9230f
 }
-.info_tb_orange {
+.table__cell--info_orange {
 	border-left: 8px solid #FF7D00
 }
-.info_tb_yelow {
+.table__cell--info_yelow {
 	border-left: 8px solid #FFC800
 }
-.warning_red {
+.table__row--warning_red {
 	background: #EBDBDB
 }
-.warning_red .code_tb,
-.warning_red .descr_tb,
-.caption_td_name {
+.warning_red .table__cell--code,
+.warning_red .table__cell--descr,
+.caption__td_name {
 	color: #111
 }
 .info_total {
@@ -56,6 +57,18 @@
 .btn_go {
 	color: #FFF
 }
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	background-color: #737880;
+}
+.table__cell--status_first span {
+  background-color: #f7a600;
+}
+.table__cell--status_two span {
+  background-color: #737880;
+}
+.table__cell--status_three span {
+  background-color: #a4c500;
+}
 
 
 
@@ -63,7 +76,7 @@
 	/*=====================================
 				HEADER STYLES
 	=======================================*/
-	#header.mailbox__header {
+/*	#header.mailbox__header {
 		height: 60px;
 		border-bottom: 2px solid #ABABAB;
 		margin: 0
@@ -81,10 +94,10 @@
 		}
 		.mailbox__add:hover {
 			background-position: -64px 0
-		}
+		}*/
 
 		/* ===== SEARCH FORM ===== */
-		.mailbox__header .search {
+/*		.mailbox__header .search {
 			position: absolute;
 			top: 18px;
 			left: 160px;
@@ -133,23 +146,34 @@
 		.mailbox__header .search__btn:hover {
 			background-position: -56px 0
 		}
-
+*/
 
 /*=========================================*/
 
-.new_table {
-	width: 1280px;
+
+
+/*==========================================
+				TABLE
+============================================*/
+
+.mailbox__table {
 	margin: 0 auto;
 	font: 11px/22px Arial
 }
+.mailbox__table--sm {
+	width: 1260px
+}
+.mailbox__table--lg {
+	width: 1960px
+}
 .wrap {
-	height: 870px;
+	height: 270px;
 	overflow-x: hidden
 }
 .table_caption,
 .info_panel,
 .table,
-.table_row {
+.table__row {
 	display: table;
 	width: 100%
 }
@@ -160,23 +184,28 @@
 	text-transform: uppercase;
 	text-align: left;
 }
-.table_row {
+.table__row {
 	border: 1px solid #D3D5D7
 }
 
-.table_cell {
+.table__cell {
+	box-sizing: border-box;
 	display: table-cell;
 	height: 30px;
 	vertical-align: middle;
 	text-align: left;
 	padding: 0 11px;
+	white-space: pre;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 .info_tb  {
 	width: 8px;
 }
-.warning_red .code_tb,
-.warning_red .descr_tb,
-.caption_td_name {
+.caption__td--name,
+.table__cell--date span,
+.warning_red .table__cell--code,
+.warning_red .table__cell--descr {
   	font-family: Arial;
   	font-weight: bold;
 }
@@ -230,24 +259,19 @@
 	float: right;
 	margin-top: 4px;
 }
-.caption_td,
-.local_tb,
-.process_tb,
-.date_tb,
-.code_tb {
+.caption__td,
+.table__cell--local_tb,
+.table__cell--process_tb,
+.table__cell--date_tb,
+.table__cell--code_tb {
 	padding-left: 24px;
 	width: 100px;
 }
-.caption_td_name {
+.caption__td--name {
 	padding: 0;
 	width: 145px;
 }
-.caption_td_name,
-.date_tb span {
-  	font-family: Arial;
-  	font-weight: bold;
-}
-.search_total,
+/*.search_total,
 .search_msg {
 	display: inline-block;
 	font-size: 12px
@@ -269,20 +293,61 @@
 .search_msg {
 	margin: 6px;
 	text-transform: uppercase;
+}*/
+
+	.table__cell--status span {
+	  position: relative;
+	  line-height: 1.1em;
+	  float: right;
+	  color: #fff;
+	  padding: 2px 10px;
+	  width: 90%;
+	  max-width: 225px;
+	  white-space: pre;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	}
+
+/*========== width cell ===========*/
+
+/* 11+11+26+10+10+16+16=100%  */
+
+
+.table__cell--date {
+	width: 11%;
+	max-width: 100px;
+}
+.table__cell--code {
+	width: 10%;
+	max-width: 100px;
 }
 
+.table__cell--descr {
+	width: 26%;
+	max-width: 100px;
+}
+.table__cell--local {
+	width: 10%;
+}
+.table__cell--process {
+	width: 10%;
+}
+.table__cell--organisation {
+	width: 16%;
+	max-width: 100px;
+}
+.table__cell--status {
+	padding: 0;
+	width: 16%
+}
 
 /*================================
 			FORM
 ==================================*/
 
 
-.search_container {
+/*.search_container {
 	width: 960px;
-/* margin: 0 auto; */
-/* position: absolute;
-top: 100px;
-left: 470px; */
 }
 .info {
 	padding: 0 30px;
@@ -370,5 +435,71 @@ left: 470px; */
   height: 18px;
   margin-top: 6px;
   width: 555px;
+}*/
+
+
+/*========================================
+			SCROLL
+==========================================*/
+
+.mCSB_container{
+	margin-right: 30px
+}
+.mCSB_1_scrollbar.mCS-oper-report {
+	box-shadow: rgb(115, 120, 128) 0px 0px 2px;
+	width: 28px;
+}
+.mCSB_scrollTools,
+.mCSB_scrollTools .mCSB_draggerContainer {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+}
+.mCSB_scrollTools .mCSB_draggerContainer {
+	left: 0;
+}
+.mCSB_scrollTools {
+	width: 28px;
+}
+.mCSB_scrollTools .mCSB_buttonDown {
+	bottom: 0;
+	transform: rotate(180deg);
+}
+.mCSB_scrollTools .mCSB_buttonDown,
+.mCSB_scrollTools .mCSB_buttonUp {
+	background: #EDF0F2 url(../images/elements/scrollbar.png) 0 0 no-repeat;
+	position: absolute;
+	height: 26px;
+	width: 100%;
+	cursor: pointer;
+}
+.mCSB_scrollTools .mCSB_buttonDown:hover, 
+.mCSB_scrollTools .mCSB_buttonUp:hover {
+	background-position: -42px 0
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  position: relative;
+  width: 26px;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.mCSB_scrollTools a+.mCSB_draggerContainer {
+  margin: 26px 0;
+  }
+.mCustomScrollBox {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  max-width: 100%;
+  outline: 0;
+  direction: ltr;
+}
+.mCSB_scrollTools .mCSB_dragger {
+  cursor: pointer;
+  width: 100%;
+  height: 30px;
+  z-index: 1;
 }
 
