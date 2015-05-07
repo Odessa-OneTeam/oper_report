@@ -1832,7 +1832,7 @@ function handler(event){var orgEvent=event||window.event,args=[].slice.call(argu
 jQuery.easing['jswing']=jQuery.easing['swing'];jQuery.extend(jQuery.easing,{def:'easeOutQuad',swing:function(x,t,b,c,d){return jQuery.easing[jQuery.easing.def](x,t,b,c,d);},easeOutQuad:function(x,t,b,c,d){return-c*(t/=d)*(t-2)+b;},easeOutCirc:function(x,t,b,c,d){return c*Math.sqrt(1-(t=t/d-1)*t)+b;}});
 jQuery.fn.customScrollV = function(_options){
 var _options = jQuery.extend({
-	lineWidth: 24 /* this parameter sets the width of the scroll*/
+	lineWidth: 14 /* this parameter sets the width of the scroll*/
 }, _options);
 return this.each(function(){
 	var _box = jQuery(this);

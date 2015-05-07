@@ -1,4 +1,12 @@
-$(document).ready(function() {
-  $(".select2").select2();
-  $('.select2').customScrollV();
+    (function($){
+        $(window).load(function(){
+        	$.mCustomScrollbar.defaults.scrollButtons.enable=true;
+        	$(".wrap").mCustomScrollbar({
+    scrollInertia: 0,
+    theme:"oper-report"
 });
+
+            $(".wrap").mCustomScrollbar();
+
+        });
+    })(jQuery);
