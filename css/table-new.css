@@ -233,8 +233,12 @@ background-position: -36px 0
 /*====================================
 			INFO PANEL
 ======================================*/
-.table__info {}
-	.info__box {}
+.table__info {
+	position: relative;
+}
+	.info__box {
+		display: inline-block;
+	}
 		.info__box--msg {}
 		.info__box--total {}
 		.info__box--btn {}
@@ -248,17 +252,7 @@ background-position: -36px 0
 				width: 32px;
 				height: 32px;
 			}
-
-
-
-
-
-.turn_on {
-background: url(./images/bg-info.png) repeat-x 0 0;
-}
-.turn_off {
-	transform: rotate(180deg);
-}
+.open {}
 
 /*========== width cell ===========*/
 
