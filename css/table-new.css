@@ -4,6 +4,9 @@
 .mailbox {
 	background: #808080
 }
+.info_panel {
+	position: relative;
+}
 .info_panel,
 .info_search {
 	background-color: #737880
@@ -70,88 +73,6 @@
   background-color: #a4c500;
 }
 
-
-
-
-	/*=====================================
-				HEADER STYLES
-	=======================================*/
-/*	#header.mailbox__header {
-		height: 60px;
-		border-bottom: 2px solid #ABABAB;
-		margin: 0
-	}
-		.mailbox__header .holder-operatop {
-			margin-top: 16px
-		}
-		.mailbox__add {
-			position: absolute;
-			background: url(../images/bg-add.gif) no-repeat 0 0;
-			width: 64px;
-			height: 64px;
-			text-indent: -9999px;
-			overflow: hidden
-		}
-		.mailbox__add:hover {
-			background-position: -64px 0
-		}*/
-
-		/* ===== SEARCH FORM ===== */
-/*		.mailbox__header .search {
-			position: absolute;
-			top: 18px;
-			left: 160px;
-			height: 28px;
-			width: 671px
-		}
-			.mailbox__header .search__input {
-				color: #969AA0;
-				font: italic 15px Arial;
-				padding: 0 50px 0 10px;
-				height: 27px;
-				width: 561px;;
-				border: none;
-				-webkit-box-shadow: #c4c7c8 0 1px 2px;
-				-moz-box-shadow: #c4c7c8 0 1px 2px;
-				box-shadow: #c4c7c8 0 1px 2px;
-				-webkit-box-sizing: border-box;
-				-moz-box-sizing: border-box;
-				box-sizing: border-box
-			}
-
-			.mailbox__header .search__input:focus {
-				background: url(../images/button_clear.png) #fff 100% 0 no-repeat;
-				content: '';
-			}
-
-		.mailbox__header .search__btn {
-			background-repeat: no-repeat;
-			background-position: 0 0;
-			float: right;
-			height: 100%;
-			width: 55px;
-			text-indent: -9999px;
-			overflow: hidden
-		}
-		.mailbox__header .search__btn--search {
-			background: url(../images/button_search.png)
-		}
-		.mailbox__header .open .search__btn--filter {
-			background: url(../images/icons/drop_open.png) 0 0;
-			height: 48px;
-		}
-		.mailbox__header .search__btn--filter {
-			background: url(../images/button_filter.png)
-		}
-		.mailbox__header .search__btn:hover {
-			background-position: -56px 0
-		}
-*/
-
-/*=========================================*/
-
-
-
 /*==========================================
 				TABLE
 ============================================*/
@@ -170,6 +91,7 @@
 	height: 270px;
 	overflow-x: hidden
 }
+
 .table_caption,
 .info_panel,
 .table,
@@ -178,7 +100,7 @@
 	width: 100%
 }
 .info_panel {
-	border-top: 5px solid #81868D;
+	border-top: 5px solid #676C73;;
 	height: 28px;
 	margin-top: 1px;
 	text-transform: uppercase;
@@ -280,30 +202,6 @@
 	padding: 0;
 	width: 145px;
 }
-/*.search_total,
-.search_msg {
-	display: inline-block;
-	font-size: 12px
-}
-.search_total a {
-	color: #B9BCC0;
-	text-decoration: none;
-}
-.search_total {
-  float: right;
-  text-transform: uppercase;
-  background: url(../images/icons/close.png) no-repeat 0 3px;
-  margin: 6px 215px 0 0;
-  padding: 0 25px;
-}
-.search_total:hover {
-	background: url(../images/icons/close.png) no-repeat 0 -34px;
-}
-.search_msg {
-	margin: 6px;
-	text-transform: uppercase;
-}*/
-
 	.table__cell--status span {
 	  position: relative;
 	  line-height: 1.1em;
@@ -316,6 +214,51 @@
 	text-overflow: ellipsis;
 	overflow: hidden;
 	}
+
+	.maximize {
+  background: url(../images/elements/maximize.png) no-repeat 0 0;
+  position: absolute;
+  text-indent: -9999px;
+  overflow: hidden;
+  right: 0;
+  top: -4px;
+  width: 32px;
+  height: 32px;
+}
+	.maximize:hover {
+background-position: -36px 0
+}
+
+
+/*====================================
+			INFO PANEL
+======================================*/
+.table__info {}
+	.info__box {}
+		.info__box--msg {}
+		.info__box--total {}
+		.info__box--btn {}
+			.maximize {
+				background: url(../images/elements/maximize.png) no-repeat 0 0;
+				position: absolute;
+				text-indent: -9999px;
+				overflow: hidden;
+				right: 0;
+				top: -4px;
+				width: 32px;
+				height: 32px;
+			}
+
+
+
+
+
+.turn_on {
+background: url(./images/bg-info.png) repeat-x 0 0;
+}
+.turn_off {
+	transform: rotate(180deg);
+}
 
 /*========== width cell ===========*/
 
