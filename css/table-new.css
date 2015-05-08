@@ -209,6 +209,15 @@
   	font-family: Arial;
   	font-weight: bold;
 }
+.table__cell--descr a {
+	font-family: Arial;
+  	font-weight: bold;
+  	text-decoration: none;
+  	color: #737880;
+}
+.table__cell--descr a:hover{
+	text-decoration: underline;
+}
 .table_caption {
 	display: table;
 	height: 28px;
