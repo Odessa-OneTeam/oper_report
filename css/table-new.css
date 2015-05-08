@@ -215,19 +215,6 @@
 	overflow: hidden;
 	}
 
-	.maximize {
-  background: url(../images/elements/maximize.png) no-repeat 0 0;
-  position: absolute;
-  text-indent: -9999px;
-  overflow: hidden;
-  right: 0;
-  top: -4px;
-  width: 32px;
-  height: 32px;
-}
-	.maximize:hover {
-background-position: -36px 0
-}
 
 
 /*====================================
@@ -254,6 +241,9 @@ background-position: -36px 0
 				top: -4px;
 				width: 32px;
 				height: 32px;
+			}
+			.maximize:hover {
+				background-position: -36px 0
 			}
 .open {}
 
