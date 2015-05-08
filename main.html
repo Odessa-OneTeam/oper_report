@@ -50,6 +50,7 @@
 <body class="mbox">
 	<div id="wrapper">
 		<div id="header" class="mbox-header mbox-header--sm">
+
 			<div class="mbox-header__top">
 				<div class="holder-time">
 					<span class="time">10 : 41</span>
@@ -59,14 +60,39 @@
 					<h1>Всероссийская система оперативных донесений о чрезвычайных ситуациях в реальном времени</h1>
 				</div>
 			</div>
+
 			<div class="mbox-header__bottom">
 				<a href="#" class="mbox-header__add"></a>
 
 				<div class="mbox-header__btn-group">
-					<div class="mbox-header__criteria criteria">
+					<div class="mbox-header__criteria criteria criteria--open">
 						<a href="#" class="mbox-header__btn mbox-header__btn--criteria">Поиск по критериям</a>
 					</div>
+					<a href="#" class="mbox-header__btn mbox-header__btn--stats">Статистика</a>
 				</div>
+				
+				<div class="mbox-header__views">
+					<ul class="view-switch">
+						<li class="view-switch__item view-switch__item--active">
+							<a href="" class="view-switch__link view-switch__link--map">Карта</a>
+						</li>
+						<li class="view-switch__item">
+							<a href="" class="view-switch__link view-switch__link--list">Список</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="mbox-header__panel">
+					<div class="mbox-header__userinfo">
+						<a href="#" class="userinfo">
+							<span class="userinfo__name">Администратор</span>
+							<span class="userinfo__picture panel--img"></span>
+						</a>
+					</div>
+
+					<a href="#" class="mbox-header__login panel--img"></a>
+				</div>
+				
 			</div>
 		</div>
 	</div>
