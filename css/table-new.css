@@ -130,7 +130,7 @@ background: url(../images/ico-warn.png) no-repeat
 				TABLE
 ============================================*/
 .mbox {
-	overflow-y: hidden
+/*	overflow-y: hidden*/
 }
 .mbox__table {
 	margin: 0 auto;
@@ -269,6 +269,15 @@ background: url(../images/ico-warn.png) no-repeat
 	width: 18%
 }
 
+
+/*.table__wrap {
+	position: absolute;
+	margin: 0 auto;
+	left: auto;
+	right: auto;
+	bottom: 30px;
+	height: 336px;
+}*/
 
 
 /*========================================

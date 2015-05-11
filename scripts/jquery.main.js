@@ -1026,7 +1026,8 @@ var pageInit = {
         this.autoCommentHeight();
 		this.initOpen();
 		this.checkPeople();
-		this.simpleboxlink()
+		this.openMailBox();
+		this.simpleboxlink();
 		//this.index();
 		this.tooltip();
 		this.time();
@@ -1385,6 +1386,41 @@ var pageInit = {
 //			});
 		})
 	},
+// 		openMailBox: function(){
+// 		$('div.mbox__table').each(function(){
+// 			var hold = $('.table__info');
+// 			var button = hold.find('.turn');
+// 			var box = $('.mbox__table');
+// 			console.log(box);
+// 			var heightBox = box.innerHeight();
+// 			var speed = 300;
+
+// 			box.css({marginTop:+heightBox});
+
+// 			button.click(function(){
+// 				if(!hold.hasClass('open')){
+// 					hold.addClass('open');
+// 					box.animate({marginTop:0},{queue: false, duration: speed});
+// 				}
+// 				else{
+// 					hold.removeClass('open');
+// 					box.animate({marginTop:+heightBox},{queue: false, duration: speed});
+// 				}
+// 				return false;
+// 			});
+// 			box.hover(function(){
+// 				box.addClass('hovering');
+// 			}, function(){
+// 				box.removeClass('hovering');
+// 			});
+// //			$("body").click(function(){
+// //				if(!box.hasClass('hovering')){
+// //					hold.removeClass('open');
+// //					box.animate({marginTop:-heightBox},{queue: false, duration: speed});
+// //				}
+// //			});
+// 		})
+// 	},
 	form: function(){
 		$('form').customForm();
 		$('.selectOptions.customSelect > div').customScrollV();
