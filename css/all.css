@@ -647,7 +647,8 @@ address {
 }
 #header .holder-operatop {
 	float: right;
-	width: 328px;
+	/*width: 328px;*/
+	width: 308px;
 	margin: 32px 0 0;
 	padding: 0 32px 0 0;
 	position: relative;
@@ -711,7 +712,7 @@ address {
 		height: 64px;
 		z-index: 11
 	}
-		.index .add {
+		.index .add, .beta .add{
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -721,11 +722,12 @@ address {
 			text-indent: -9999px;
 			overflow: hidden
 		}
-		.index .add:hover {
+		.index .add:hover, .beta .add:hover {
 			background-position: -64px 0
 		}
 		.index #nav {
-			width: 480px;
+			/*width: 480px;*/
+			width: 500px;
 			float: left
 		}
 			.index #nav .view {
@@ -786,11 +788,13 @@ address {
 				-webkit-text-shadow: #56504d 0 1px 1px;
 				text-shadow: #56504d 0 1px 1px;
 			}
+				.statistics-body #nav .sample span,
 				.index #nav .sample span {
 					display: block;
 					padding: 0 32px 0 12px;
 					background: url(../images/bg-drop.png) no-repeat 100% 14px;
 				}
+			.statistics-body #header.beta #nav .sample:hover,
 			.index #nav .sample:hover {
 				background-color: #817b76;
 				background-position: 0 -12px;
@@ -806,10 +810,34 @@ address {
 				}
 		.index .drop {
 			position: relative;
-			width: 96px;
+			width: 180px;
 			margin: 32px 0 0;
 			float: left;
 			color: #fff;
+		}
+		.statistics-body .stats-btn,
+		.index .stats-btn
+		{
+			float: left;
+			color: #fff;
+			background: #736c67 url(../images/bg-sample.png) repeat-x 0 28px;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: 11px;
+			margin-top: 32px;
+			line-height: 32px;
+			padding-left: 10px;
+			padding-right: 10px;
+			-moz-text-shadow: #56504d 0 1px 1px;
+			-o-text-shadow: #56504d 0 1px 1px;
+			-webkit-text-shadow: #56504d 0 1px 1px;
+			text-shadow: #56504d 0 1px 1px;
+		}
+		.statistics-body .stats-btn:hover,
+		.index .stats-btn:hover
+		{
+			background-color: #817b76;
+  			background-position: 0 -12px;
 		}
 			.index .drop label {
 				margin: 0;
@@ -867,7 +895,7 @@ address {
 .index .drop form .text {
 	float: right;
 	position: relative;
-	width: 256px;
+	width: 278px;
 }
 .index .drop form .text input {
 	width: 220px;
@@ -2853,8 +2881,14 @@ label .inf-only {margin:5px 0 0;}
 .registration-popup-body
 {
 	overflow: hidden;
-	height: 330px;
+	/*height: 330px;*/
 	border-bottom: 1px solid #ced2d5;
+}
+.registration-popup-body textarea
+{
+	width: 300px;
+	max-width: 300px;
+	margin: 0;
 }
 .registration-popup-body .input-column .birthday
 {
@@ -2867,7 +2901,7 @@ label .inf-only {margin:5px 0 0;}
 }
 .registration-popup-body .input-column .gender
 {
-	margin: 1em 0 0;
+	margin: 1em 0 .5rem;
 	font-size: 1.5em;
 }
 .disclaimer-popup
@@ -2944,7 +2978,7 @@ label .inf-only {margin:5px 0 0;}
 }
 .label-column label:last-child
 {
-	margin: 1.8em 0 0
+	/*margin: 1.8em 0 0*/
 }
 .input-column
 {
@@ -3147,7 +3181,7 @@ label .inf-only {margin:5px 0 0;}
 	width:733px;
 	z-index:1;
 }
-.index .add {
+.index .add, .beta .add {
 	top:auto;
 	bottom:0;
 	z-index:1;
@@ -3306,6 +3340,12 @@ form .check-people .triple-big .left label {margin: 8px 10px 10px 0;}
 	background: url(../images/bg-map.gif) no-repeat 100% 0;
 }
 #header.beta .add:hover {background-position: -64px 0;}
+
+.statistics-body #header.beta #nav {
+  width: 520px;
+  margin-left: 87px
+}
+
 #header.beta #nav {
 	width: 480px;
 	float: left;
@@ -3355,6 +3395,9 @@ form .check-people .triple-big .left label {margin: 8px 10px 10px 0;}
 #header.beta #nav .view li.active a.view-list,
 #header.beta #nav .view li a.view-list:hover {
 	background-position: 69px -138px;
+}
+.statistics-body #header.beta #nav .sample {
+	margin: 32px 10px 0
 }
 #header.beta #nav .sample {
 	float: left;
@@ -3455,7 +3498,10 @@ form .check-people .triple-big .left label {margin: 8px 10px 10px 0;}
 {
 	float: left;
 	width: 660px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	 
 	padding: 0 2.375em 0 0;
 }
 .help .help-area img
@@ -3964,14 +4010,14 @@ form.search footer label.archived-label
 		left: auto;
 		position: absolute;
 	}
-	.index .add
+	.index .add, .beta .add
 	{
 		top: auto;
 		height: 48px;
 		width: 	48px;
 		background: url(../images/bg-add.gif) no-repeat 10% 50%;
 	}
-	.index .add:hover
+	.index .add:hover, .beta .add:hover
 	{
 		background-position: 90% 50%;
 	}
@@ -4022,7 +4068,9 @@ a.download-btn-md:hover
 	background: #edf0f2;
 	box-shadow: 1px 1px 1px #edf0f2;
 	padding: 15px 24px 25px 24px;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;;
+	-moz-box-sizing: border-box;;
+	box-sizing: border-box;;
 }
 .download-popup-title
 {
@@ -4105,7 +4153,9 @@ a.download-btn-md:hover
     -moz-box-shadow: #c4c7c8 0 1px 2px;
     box-shadow: #c4c7c8 0 1px 2px;
     border-radius: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;;
+    -moz-box-sizing: border-box;;
+    box-sizing: border-box;;
 }
 .select2-dropdown-open {
     box-shadow: 0 0 3px #22B2FB
@@ -4383,7 +4433,9 @@ div.select2-drop-active
 
 #header > .toolbar > .title-app > .title-app-tag {
     margin: 0 !important;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;;
+    -moz-box-sizing: border-box;;
+    box-sizing: border-box;;
     width: auto;
     font-size: 14px;
     font-family: 'robotobold_condensed';
@@ -4490,7 +4542,9 @@ div.select2-drop-active
     width: 100%;
     margin: 0 auto;
     border-top: 5px solid #a6a9ac;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;;
+    -moz-box-sizing: border-box;;
+    box-sizing: border-box;;
     padding: 1px 16px;
     height: auto;
     line-height: 5px
@@ -4535,7 +4589,9 @@ div.select2-drop-active
 #main .col > .info {
     padding: 0 5px;
     margin: 0 0 .5em;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;;
+    -moz-box-sizing: border-box;;
+    box-sizing: border-box;;
     font-size: 13px;
     background-color: #d4d7d9
 }
@@ -4932,7 +4988,9 @@ textarea.final_form__textarea {
   margin-top: 45px
 }
 .error-page #main {
-		box-sizing: border-box;
+		-webkit-box-sizing: border-box;;
+		-moz-box-sizing: border-box;;
+		box-sizing: border-box;;
 		padding: 0 30px
 	}
 .position-middle>.sm-inputs-line {
@@ -4944,3 +5002,84 @@ textarea.final_form__textarea {
 .position-last>.sm-inputs-line:first-child {
 	margin: 0 0 17px 0 
 }
+
+#imageMuteSound
+{
+	position: absolute;
+	top: -10px;
+}
+
+/*===============28.04.15=====================*/
+
+.statistics-body #main .statistics-form .info-inside {
+	box-shadow: none;
+}
+.statistics-body .medical-team .hold-inside textarea,
+.holder-medicine .medicine .hold-inside textarea {
+	float: right;
+	min-height: 50px !important;
+	min-width: 325px;
+	max-width: 325px;
+	width: 325px;
+}
+.holder-medicine.holder-medicine-new .medicine .hold-inside {
+	float: right;
+	width: 460px;
+	padding: 18px 3px 0;
+ }
+.hold-inside {
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	width: 65%;
+	padding-left: 2%;
+	padding-top: 10px;
+}
+.holder-medicine.holder-medicine-new .medicine .hold-inside input {
+	width: 83px;
+	float: left;
+	margin: 0 0 14px;
+}
+.info-inside .holder-medicine.holder-medicine-new .medicine label {
+	margin: 15px 0 3px;
+	width: 115px;
+}
+.info-inside .holder-medicine.holder-medicine-new .medicine .logo-organization {
+	margin-right: 0
+}
+.info-inside .inf-only,
+.info-inside .box label {
+	font-size: 12px;
+	line-height: 14px;
+}
+.label-medical {
+	margin: 15px 0 3px;
+	width: 115px;
+	float: left;
+	font-size: 12px;
+	line-height: 14px;
+	position: relative;
+	background: url(../images/bg-line-n.gif) repeat-x 0 8px;
+}
+.label-medical .first-line {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: #edf0f2;
+	padding-left: 6px;
+ }
+.label-medical span.text {
+	background: #edf0f2;
+	padding-right: 5px;
+}
+.statistics-body #main .col .inf-only {
+	background: url(../images/bg-inf-only.gif) no-repeat 4px 0 !important
+}
+.info-inside .holder-medicine.holder-medicine-new .medicine .sm-inputs-line label {
+	width: 0
+}
+.statistics-body #main .col {
+  padding-left: 0
+}
+
+
