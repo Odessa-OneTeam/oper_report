@@ -16,7 +16,7 @@
 }
 .mCSB_1_scrollbar.mCS-oper-report,
 .table__row:hover {
-	background: #FFF
+	background: #fff
 }
 .table__caption,
 .table__row--warning_def {
@@ -44,19 +44,17 @@
 }
 .info__box,
 .info__box--btn a {
-	color: #FFF
-}
-.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-	background-color: #737880;
+	color: #fff
 }
 .status_first {
-  background-color: #f7a600;
+  background-color: #f7a600
 }
-.status_two {
-  background-color: #737880;
+.status_two,
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background-color: #737880
 }
 .status_three {
-  background-color: #a4c500;
+  background-color: #a4c500
 }
 
 
@@ -68,16 +66,16 @@
 	height: 32px;
 	position: relative;
 	text-transform: uppercase;
-	text-align: left;
+	text-align: left
 }
 .table__info,
 .info__box--btn a:hover {
-	box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.1)
 }			
 .table__info.open,				
 .table__info.open .info__box--msg,
 .table__info.open .info__box--btn a:hover {
-	box-shadow: inset 0 4px 0 rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0 4px 0 rgba(0, 0, 0, 0.1)
 }
 .table__info.open .ico_warn {
 background: url(../images/ico-warn.png) no-repeat
@@ -87,27 +85,27 @@ background: url(../images/ico-warn.png) no-repeat
 		padding: 6px 0 6px 9px;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
-		box-sizing: border-box;
+		box-sizing: border-box
 	}
 			.info__box--msg {
-				padding-right: 40px;
+				padding-right: 40px
 			}
 			.info__box--total {
 				color: #CDCDCD;
-				margin-left: -3px;
+				margin-left: -3px
 			}
 			.info__box--btn {
 				float: right;
 				width: 250px;
-				text-align: right;
+				text-align: right
 			}
 				.info__box--btn a {
 					text-decoration: none;
-					height: 32px;
+					height: 32px
 			}
 			.turn:hover,
 			.info__box--btn a:hover {
-				background-color: #F7A600;
+				background-color: #F7A600
 			}
 				.turn {
 					padding: 10px 30px;
@@ -235,8 +233,8 @@ background: url(../images/ico-warn.png) no-repeat
 	max-width: 225px;
 	white-space: pre;
 	text-overflow: ellipsis;
-	overflow: hidden;
-	}
+	overflow: hidden
+}
 
 /*========== width cell ===========*/
 
@@ -245,25 +243,25 @@ background: url(../images/ico-warn.png) no-repeat
 
 .table__cell--date {
 	width: 11%;
-	max-width: 100px;
+	max-width: 100px
 }
 .table__cell--code {
 	width: 10%;
-	max-width: 100px;
+	max-width: 100px
 }
 .table__cell--descr {
 	width: 26%;
-	max-width: 100px;
+	max-width: 100px
 }
 .table__cell--local {
-	width: 10%;
+	width: 10%
 }
 .table__cell--process {
-	width: 10%;
+	width: 10%
 }
 .table__cell--organisation {
 	width: 14%;
-	max-width: 100px;
+	max-width: 100px
 }
 .table__cell--status {
 	max-width: 225px;
@@ -282,18 +280,18 @@ background: url(../images/ico-warn.png) no-repeat
 }
 .mCSB_1_scrollbar.mCS-oper-report {
 	box-shadow: rgb(115, 120, 128) 0px 0px 2px;
-	width: 28px;
+	width: 28px
 }
 .mCSB_scrollTools,
 .mCSB_scrollTools .mCSB_draggerContainer {
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	right: 0;
+	right: 0
 }
 .mCSB_scrollTools .mCSB_buttonDown {
 	bottom: 0;
-	transform: rotate(180deg);
+	transform: rotate(180deg)
 }
 .mCSB_scrollTools .mCSB_buttonDown,
 .mCSB_scrollTools .mCSB_buttonUp {
@@ -301,7 +299,7 @@ background: url(../images/ico-warn.png) no-repeat
 	position: absolute;
 	height: 26px;
 	width: 100%;
-	cursor: pointer;
+	cursor: pointer
 }
 .mCSB_scrollTools .mCSB_buttonDown:hover, 
 .mCSB_scrollTools .mCSB_buttonUp:hover {
@@ -312,25 +310,25 @@ background: url(../images/ico-warn.png) no-repeat
   width: 26px;
   height: 100%;
   margin: 0 auto;
-  text-align: center;
+  text-align: center
 }
 .mCSB_scrollTools a+.mCSB_draggerContainer {
-  margin: 26px 0;
+  margin: 26px 0
   }
 .mCSB_scrollTools .mCSB_draggerContainer {
-	left: 0;
+	left: 0
 }
 .mCustomScrollBox {
   position: relative;
   overflow: hidden;
   max-width: 100%;
   outline: 0;
-  direction: ltr;
+  direction: ltr
 }
 .mCSB_scrollTools .mCSB_dragger {
   cursor: pointer;
   width: 100%;
   height: 30px;
-  z-index: 1;
+  z-index: 1
 }
 
