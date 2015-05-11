@@ -1,0 +1,104 @@
+/* ===========================================
+ 				SEARCH BY CRITERIA
+ ============================================= */
+.criteria * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.criteria.drop {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+	.criteria__has-drop {
+		position: absolute;
+		width: 864px;
+		overflow: hidden;
+	}
+		.criteria__holder {
+			background: #88827e;
+		}
+			.criteria-form {
+				color: #fff;
+			}
+
+				/* ===== commons for criteria form ===== */
+				.criteria-form label {
+					margin: 0;
+					font: 11px/1.1em Arial, sans-serif;
+					color: #fff;
+					vertical-align: middle;
+				}
+				.criteria-form label:hover {
+					text-decoration: underline;
+				}
+				.criteria--btn {
+					position: absolute;
+					top: 5px;
+					left: 10px;
+					height: 15px;
+					outline: none;
+					border: none;
+				}
+
+				/* ===== top panel at criteria form ===== */
+				.criteria__top-panel {
+					padding: 5px;
+					border-bottom: 2px solid #736c67;
+				}
+					.criteria__top-panel > div {
+						position: relative;
+						display: inline-block;
+						margin-top: 3px;
+						vertical-align: top;
+					}
+					.criteria__top-checkbox {
+						padding: 5px 20px 5px 10px;
+						border-right: 1px solid #736c67;
+					}
+						.criteria__top-checkbox .customCheckbox {
+							margin: 3px 10px 0 0;
+						}
+
+					.criteria__top-search {
+						padding: 0 10px 0 0;
+					}
+						.criteria__top-search .btn-search {
+							width: 15px;
+							background: url("../images/bg-search.png");
+						}
+						.criteria__top-search > input[type="text"] {
+							outline: none;
+							height: 3em;
+							width: 255px;
+							margin: 0 0 -7px;
+							background: none;
+							padding: 3px 10px 8px 35px;
+							font: italic 11px/1.5em 'open_sansregular';
+							text-transform: uppercase;
+							-webkit-box-shadow: none;
+							box-shadow: none;
+						}
+						.criteria__top-search > input:focus,
+						.criteria__top-search.ready > input {
+							font-style: normal;
+							color: #fff;
+							border-bottom: 2px solid;
+						}
+
+					.criteria__top-reset {
+						float: right;
+					}
+						.criteria__top-reset .btn-reset {
+							width: 16px;
+							background: url(../images/close-field.png);
+						}
+						.criteria__top-reset .reset-fields {
+							font-size: 14px;
+							padding: 6px 10px 3px 35px;
+						}
+
+				/* ===== main block at criteria form ===== */
+				.criteria__main {
+					padding-bottom: 1em;
+				}

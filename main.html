@@ -15,8 +15,8 @@
 
 	<!-- Наши стили -->
 	<link rel="stylesheet" href="css/table-new.css">
-	<link rel="stylesheet" href="css/mailbox__home.css">
-
+	<link rel="stylesheet" href="css/mailbox__header.css">
+	<link rel="stylesheet" href="css/mailbox__criteria.css">
 
 	<!-- Не трогать эти скрипты -->
 	<script src="publicLibs/jQuery/jquery-1.10.2.min.js"></script>
@@ -65,8 +65,44 @@
 				<a href="#" class="mbox-header__add"></a>
 
 				<div class="mbox-header__btn-group">
-					<div class="mbox-header__criteria criteria criteria--open">
-						<a href="#" class="mbox-header__btn mbox-header__btn--criteria">Поиск по критериям</a>
+					<div class="mbox-header__criteria criteria drop">
+						<a href="#" class="sample mbox-header__btn mbox-header__btn--criteria">Поиск по критериям</a>
+
+						<div class="criteria__has-drop">
+							<div class="holder criteria__holder">
+		                		<form action="" method="post" autocomplete="off" class="criteria-form" id="map-search-form">
+									<fieldset>
+										<div class="criteria__top-panel">
+											<div class="criteria__top-checkbox">
+												<input class="customCheckbox" type="checkbox" name="last" id="checkbox01">
+												<label for="checkbox01">За последние сутки</label>
+											</div>
+											<div class="criteria__top-search">
+			                                    <button class="btn-search criteria--btn" type="submit"></button>
+			                                    <input type="text" value="" placeholder="Поиск..." name="search" alt="поиск ...">
+			                                </div>
+											<div class="criteria__top-reset">
+			                                    <button class="btn-reset criteria--btn" id="resetButton" type="reset"></button>
+			                                    <label for="resetButton" class="reset-fields">Сбросить критерии поиска</label>
+			                                </div>
+										</div>
+										<div class="criteria__main">
+											<div class="columns">
+												<div class="col-1">
+													Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime dolorem nihil minus, quasi, dicta cupiditate aut magni ea veniam natus provident eveniet tempore iure minima placeat distinctio ducimus quo cum.
+												</div>
+												<div class="col-2">
+													Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime dolorem nihil minus, quasi, dicta cupiditate aut magni ea veniam natus provident eveniet tempore iure minima placeat distinctio ducimus quo cum.
+												</div>
+												<div class="col-3">
+													Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime dolorem nihil minus, quasi, dicta cupiditate aut magni ea veniam natus provident eveniet tempore iure minima placeat distinctio ducimus quo cum.
+												</div>
+											</div>
+										</div>
+									</fieldset>
+								</form>
+							</div>
+						</div>
 					</div>
 					<a href="#" class="mbox-header__btn mbox-header__btn--stats">Статистика</a>
 				</div>
