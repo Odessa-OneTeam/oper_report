@@ -1417,14 +1417,20 @@ var pageInit = {
 			buttonResize.on('click', function(e) {
 				// e.preventDefault();
 				if (!hold.hasClass('open')&&!box.hasClass('full_open')) {
+
 					hold.addClass('open');
+
 					// box.removeClass('mbox__table--sm');
 					header.removeClass('mbox-header--sm');
+
 					box.addClass('full_open'); //box.addClass('mbox__table--lg full_open');
 					header.addClass('mbox-header--lg');
+
 					tableWrap.css({'max-height':+heightBody-caption-6});
+
 					$('.table__wrap').css({height:+heightBody});
 					box.css({marginTop:+heightBody});
+					
 					$('#mCSB_1').css({'max-height':0});
 					box.animate({marginTop:0},{queue: false, duration: speed});
 					// mailBoxAnimate(0, open);
@@ -1434,32 +1440,27 @@ var pageInit = {
 					hold.removeClass('open');
 
 					box.animate({marginTop:+heightBody},{queue: false, duration: speed});
-
 					box.removeClass('mbox__table--lg full_open');
-
 					box.addClass('mbox__table--sm');
 
 					header.removeClass(mboxHeaderE+'lg');
-
 					header.addClass(mboxHeaderE+'sm');
 				}
 				else if (hold.hasClass('open')&&!box.hasClass('full_open')) {
 
 					// box.removeClass('mbox__table--sm');
+
 					box.addClass('full_open'); //box.addClass('mbox__table--lg full_open');
 
 					header.removeClass(mboxHeaderE+'sm');
-
 					header.addClass(mboxHeaderE+'lg');
 
 					tableWrap.css({'max-height':+heightBody-caption-6});
 
 					$('#mCSB_1').css({'max-height':0});
-
 					$('.table__wrap').css({height:+heightBody});
 
 					box.css({marginTop:+heightBody});
-
 					box.animate({marginTop:0},{queue: false, duration: speed});
 				};
 				
@@ -1473,14 +1474,11 @@ var pageInit = {
 
 					tableWrap.css({'max-height':+heightBox2});
 
-					console.log(heightBox);
-
-					console.log(heightBox2);
-
-					console.log($('.table__info').innerHeight());
+					// console.log(heightBox);
+					// console.log(heightBox2);
+					// console.log($('.table__info').innerHeight());
 
 					hold.addClass('open');
-
 					box.animate({marginTop:0},{queue: false, duration: speed});
 
 				}
@@ -1489,21 +1487,17 @@ var pageInit = {
 					tableWrap.css({'max-height':+heightBox});
 					
 					hold.removeClass('open');
-
 					box.animate({marginTop:+heightBox},{queue: false, duration: speed});
 				}
 				else if (hold.hasClass('open')&&box.hasClass('full_open')){
 
 					hold.removeClass('open');	
-
 					box.animate({marginTop:+heightBody},{queue: false, duration: speed});
 
 					box.removeClass('mbox__table--lg full_open');
-
 					box.addClass('mbox__table--sm');
 
 					header.removeClass(mboxHeaderE+'lg');
-
 					header.addClass(mboxHeaderE+'sm');
 
 				}
