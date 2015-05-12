@@ -27,7 +27,7 @@
 		width: 960px;
 	}
 	.mbox-header--lg {
-		width: 1260px;
+		min-width: 1260px;
 	}
 
 

@@ -129,6 +129,9 @@ background: url(../images/ico-warn.png) no-repeat
 /*==========================================
 				TABLE
 ============================================*/
+.mbox #wrapper {
+position: relative;
+}
 .mbox {
 /*	overflow-y: hidden*/
 }
@@ -136,12 +139,6 @@ background: url(../images/ico-warn.png) no-repeat
 	margin: 0 auto;
 	font: 11px/22px Arial;
 	height: 100%
-}
-.mbox__table--sm {
-	width: 1260px
-}
-.mbox__table--lg {
-	min-width: 1260px
 }
 .table__caption,
 .table,
@@ -157,7 +154,7 @@ background: url(../images/ico-warn.png) no-repeat
 }
 .mbox .wrap {
 	overflow-x: hidden;
-	max-height: 300px
+	max-height: 250px; /*for script*/
 }
 	.table__row {
 		border: 1px solid #D3D5D7
@@ -170,8 +167,12 @@ background: url(../images/ico-warn.png) no-repeat
 			padding: 0 11px;
 			white-space: pre;
 			text-overflow: ellipsis;
-			overflow: hidden
+			overflow: hidden;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
 		}
+		.table__row--warning_red .table__cell--descr a,
 		.caption__td:first-child,
 		.table__cell--date span {
 		  	font-family: Arial;
@@ -199,8 +200,6 @@ background: url(../images/ico-warn.png) no-repeat
 				background: url(../images/ico-scale-color-id.png) no-repeat;
 			}
 		.table__cell--descr a {
-			font-family: Arial;
-		  	font-weight: bold;
 		  	text-decoration: none;
 		  	color: #737880
 		}
@@ -211,14 +210,10 @@ background: url(../images/ico-warn.png) no-repeat
 	border-right: 1px solid #D2D2D2;
 	height: 18px;
 	float: right;
-	margin-top: 4px;
+	margin-top: 4px
 }
-.caption__td,
-.table__cell--local_tb,
-.table__cell--process_tb,
-.table__cell--date_tb,
-.table__cell--code_tb {
-	padding-left: 24px;
+.caption__td {
+	padding-left: 24px
 }
 .caption__td:first-child {
 	padding: 0;
@@ -237,8 +232,7 @@ background: url(../images/ico-warn.png) no-repeat
 }
 
 /*========== width cell ===========*/
-
-/* 11+11+26+10+10+14+18=100%  */
+/* 11+8+7+24+8+10+14+18=100%  */
 
 
 .table__cell--date {
@@ -246,15 +240,19 @@ background: url(../images/ico-warn.png) no-repeat
 	max-width: 100px
 }
 .table__cell--code {
-	width: 10%;
+	width: 8%;
+	max-width: 100px
+}
+.table__cell--report {
+	width: 7%;
 	max-width: 100px
 }
 .table__cell--descr {
-	width: 26%;
+	width: 24%;
 	max-width: 100px
 }
 .table__cell--local {
-	width: 10%
+	width: 8%
 }
 .table__cell--process {
 	width: 10%
@@ -270,14 +268,28 @@ background: url(../images/ico-warn.png) no-repeat
 }
 
 
-/*.table__wrap {
+.table__wrap {
 	position: absolute;
 	margin: 0 auto;
-	left: auto;
-	right: auto;
+	width: 100%;
 	bottom: 30px;
-	height: 336px;
-}*/
+	height: 286px; /*for script*/
+}
+
+/*==========width table for the future===========*/
+.mbox__table--sm {
+	/*min-width: 1260px*/
+}
+	.mbox__table--sm .table__cell--status,
+	.mbox__table--sm .table__cell--organisation {
+		/*display: none;*/
+	}
+.mbox__table--lg {
+	min-width: 1260px
+}
+/*================================================*/
+
+
 
 
 /*========================================
