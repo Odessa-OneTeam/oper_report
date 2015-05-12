@@ -1399,26 +1399,34 @@ var pageInit = {
 	openMailBox: function(){
 		$('div.mbox__table').each(function(){
 			var hold = $('.table__info'),
-				button = hold.find('.turn');
-			var buttonResize = hold.find('.maximize');
-			var box = $('.mbox__table');
-			var heightBox2 = $('.table').innerHeight()-$('.table__info').innerHeight();
-			var heightBox = box.outerHeight();
-			var heightBody = $('.mbox').innerHeight()-$('.mbox-header').innerHeight()-$('.table__info').innerHeight();
-			var speed = 300;
-			var tableWrap = $('.wrap');
-			var header = $('.mbox-header');
-			var caption = $('.table__caption').innerHeight();
+				button = hold.find('.turn'),
+				buttonResize = hold.find('.maximize'),
+				box = $('.mbox__table'),
+				heightBox2 = $('.table').innerHeight()-$('.table__info').innerHeight(),
+				heightBox = box.outerHeight(),
+				heightBody = $('.mbox').innerHeight()-$('.mbox-header').innerHeight()-$('.table__info').innerHeight(),
+				speed = 300,
+				tableWrap = $('.wrap'),
+				header = $('.mbox-header'),
+				caption = $('.table__caption').innerHeight(),
+				mboxHeaderE = 'mbox-header--';
+				animBox = function (e, open){
+					if (open) {
+						hold.addClass('open');
+					}
+					else {
+						hold.removeClass('open');
+					};
+					box.animate({marginTop:e},{queue: false, duration: speed});
+				};
 
 			// box.css({marginTop:+heightBox});
-			var mboxHeaderE = 'mbox-header--';
-
 
 			buttonResize.on('click', function(e) {
 				// e.preventDefault();
-				if (!hold.hasClass('open')&&!box.hasClass('full_open')) {
+				if (!hold.hasClass('open') && !box.hasClass('full_open')) {
 
-					hold.addClass('open');
+					// hold.addClass('open');
 
 					// box.removeClass('mbox__table--sm');
 					header.removeClass('mbox-header--sm');
@@ -1430,12 +1438,13 @@ var pageInit = {
 
 					$('.table__wrap').css({height:+heightBody});
 					box.css({marginTop:+heightBody});
-					
+
 					$('#mCSB_1').css({'max-height':0});
-					box.animate({marginTop:0},{queue: false, duration: speed});
-					// mailBoxAnimate(0, open);
+
+					animBox(0, open);
+
 				}
-				else if (hold.hasClass('open')&&box.hasClass('full_open')) {
+				else if (hold.hasClass('open') && box.hasClass('full_open')) {
 
 					hold.removeClass('open');
 
@@ -1446,7 +1455,7 @@ var pageInit = {
 					header.removeClass(mboxHeaderE+'lg');
 					header.addClass(mboxHeaderE+'sm');
 				}
-				else if (hold.hasClass('open')&&!box.hasClass('full_open')) {
+				else if (hold.hasClass('open') && !box.hasClass('full_open')) {
 
 					// box.removeClass('mbox__table--sm');
 
@@ -1461,12 +1470,13 @@ var pageInit = {
 					$('.table__wrap').css({height:+heightBody});
 
 					box.css({marginTop:+heightBody});
+
 					box.animate({marginTop:0},{queue: false, duration: speed});
 				};
 				
 			});
 			button.on('click', function(e) {
-				if(!hold.hasClass('open')&&!box.hasClass('full_open')){
+				if (!hold.hasClass('open') && !box.hasClass('full_open')){
 
 					$('.table__wrap').css({height:+heightBox});
 
@@ -1478,21 +1488,27 @@ var pageInit = {
 					// console.log(heightBox2);
 					// console.log($('.table__info').innerHeight());
 
-					hold.addClass('open');
-					box.animate({marginTop:0},{queue: false, duration: speed});
+					// hold.addClass('open');
+					// box.animate({marginTop:0},{queue: false, duration: speed});
+
+					animBox(0, open);
 
 				}
-				else if (hold.hasClass('open')&&!box.hasClass('full_open')){
+				else if (hold.hasClass('open') && !box.hasClass('full_open')){
 					// tableWrap.css({'max-height':300});
 					tableWrap.css({'max-height':+heightBox});
 					
-					hold.removeClass('open');
-					box.animate({marginTop:+heightBox},{queue: false, duration: speed});
-				}
-				else if (hold.hasClass('open')&&box.hasClass('full_open')){
+					// hold.removeClass('open');
+					// box.animate({marginTop:+heightBox},{queue: false, duration: speed});
 
-					hold.removeClass('open');	
-					box.animate({marginTop:+heightBody},{queue: false, duration: speed});
+					animBox(+heightBox);
+				}
+				else if (hold.hasClass('open') && box.hasClass('full_open')){
+
+					// hold.removeClass('open');	
+					// box.animate({marginTop:+heightBody},{queue: false, duration: speed});
+
+					animBox(+heightBody);
 
 					box.removeClass('mbox__table--lg full_open');
 					box.addClass('mbox__table--sm');
