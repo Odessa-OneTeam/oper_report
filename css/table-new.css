@@ -70,7 +70,8 @@
 }
 .table__info,
 .info__box--btn a:hover {
-	box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.1)
+	box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.1);
+	z-index: 5;
 }			
 .table__info.open,				
 .table__info.open .info__box--msg,
@@ -143,69 +144,71 @@ position: relative;
 .table__caption,
 .table,
 .table__row {
+	position: relative;
 	display: table;
-	width: 100%
+	width: 100%;
+	z-index: 5
 }
-.table__caption {
-	display: table;
-	height: 28px;
-	border-bottom: 4px solid #CDCDCD;
-	text-transform: uppercase
-}
-.mbox .wrap {
-	overflow-x: hidden;
-	max-height: 250px; /*for script*/
-}
-	.table__row {
-		border: 1px solid #D3D5D7
+	.table__caption {
+		display: table;
+		height: 28px;
+		border-bottom: 4px solid #CDCDCD;
+		text-transform: uppercase
 	}
-		.table__cell {
-			display: table-cell;
-			height: 30px;
-			vertical-align: middle;
-			text-align: left;
-			padding: 0 11px;
-			white-space: pre;
-			text-overflow: ellipsis;
-			overflow: hidden;
-			-webkit-box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			box-sizing: border-box;
+	.mbox .wrap {
+		overflow-x: hidden;
+		max-height: 250px; /*for script*/
+	}
+		.table__row {
+			border: 1px solid #D3D5D7
 		}
-		.table__row--warning_red .table__cell--descr a,
-		.caption__td:first-child,
-		.table__cell--date span {
-		  	font-family: Arial;
-		  	font-weight: bold
-		}
-			.ico_warn,
-			.ico_status_warn {
-			  background: url(../images/ico-status-verification.png) no-repeat;
+			.table__cell {
+				display: table-cell;
+				height: 30px;
+				vertical-align: middle;
+				text-align: left;
+				padding: 0 11px;
+				white-space: pre;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
 			}
-			.ico_status_edit {
-				background: url(../images/ico-status-edit.png) no-repeat;
+			.table__row--warning_red .table__cell--descr a,
+			.caption__td:first-child,
+			.table__cell--date span {
+			  	font-family: Arial;
+			  	font-weight: bold
 			}
-			.ico_warn,
-			.ico_status_warn,
-			.ico_status_edit {
-				padding: 3px 9px;
-				margin: 0px 4px 0 20px;
+				.ico_warn,
+				.ico_status_warn {
+				  background: url(../images/ico-status-verification.png) no-repeat;
+				}
+				.ico_status_edit {
+					background: url(../images/ico-status-edit.png) no-repeat;
+				}
+				.ico_warn,
+				.ico_status_warn,
+				.ico_status_edit {
+					padding: 3px 9px;
+					margin: 0px 4px 0 20px;
+				}
+				.ico_warn {
+					margin-left: 0
+				}
+				.ico_scale_color {
+					padding: 0 13px	0 20px;
+					font-size: 21px;
+					background: url(../images/ico-scale-color-id.png) no-repeat;
+				}
+			.table__cell--descr a {
+			 	text-decoration: none;
+				color: #737880
 			}
-			.ico_warn {
-				margin-left: 0
-			}
-			.ico_scale_color {
-				padding: 0 13px	0 20px;
-				font-size: 21px;
-				background: url(../images/ico-scale-color-id.png) no-repeat;
-			}
-		.table__cell--descr a {
-		  	text-decoration: none;
-		  	color: #737880
-		}
-			.table__cell--descr a:hover{
-				text-decoration: underline
-			}
+				.table__cell--descr a:hover{
+					text-decoration: underline
+				}
 .table_separator {
 	border-right: 1px solid #D2D2D2;
 	height: 18px;
@@ -278,7 +281,7 @@ position: relative;
 
 /*==========width table for the future===========*/
 .mbox__table--sm {
-	/*min-width: 1260px*/
+	min-width: 1260px
 }
 	.mbox__table--sm .table__cell--status,
 	.mbox__table--sm .table__cell--organisation {
@@ -290,6 +293,17 @@ position: relative;
 /*================================================*/
 
 
+
+
+/*===============================================
+			holder-situation styles
+================================================*/
+.mbox .holder-situation {
+	margin: 10px auto
+}
+	.mbox .list-situation li {
+		margin: 0 0 30px
+	}
 
 
 /*========================================
@@ -344,7 +358,7 @@ position: relative;
   overflow: hidden;
   max-width: 100%;
   outline: 0;
-  direction: ltr
+  direction: ltr;
 }
 .mCSB_scrollTools .mCSB_dragger {
   cursor: pointer;

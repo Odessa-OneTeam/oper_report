@@ -14,7 +14,7 @@
 		background: #e5e5e5 url(../images/bg-header.gif) repeat-x 0 100%;
 		padding: 32px 0 0;
 		text-transform: uppercase;
-		z-index: 2;
+		z-index: 20;
 		-webkit-box-shadow: #aaa 0 1px 1px;
 		-moz-box-shadow: #aaa 0 1px 1px;
 		box-shadow: #aaa 0 1px 1px;
@@ -152,7 +152,7 @@
 					  	display: inline-block;
 					  	margin-left: 15px;
 					}
-					.view-switch__item--active {}
+						.view-switch__item--active {}
 						.view-switch__link {
 							position: relative;
 							display: block;
@@ -163,9 +163,11 @@
 							text-decoration: none;
 							border-bottom: 1px solid #75caf5;
 						}
+						.view-switch__item.active a,
 						.view-switch__item--active .view-switch__link,
-						.view-switch__link:hover,
-						.view-switch__link:focus {
+						.view-switch__link:hover
+						/*.view-switch__link:focus */
+						{
 							font-weight: bold;
 							color: #2e3034;
 							border-bottom: 4px solid #00aaff;
