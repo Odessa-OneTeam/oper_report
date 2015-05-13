@@ -189,7 +189,7 @@ position: relative;
 			.ico_status_warn,
 			.ico_status_edit {
 				padding: 3px 9px;
-				margin: 0px 4px 0 20px;
+				margin: 0 4px;
 			}
 			.ico_warn {
 				margin-left: 0
