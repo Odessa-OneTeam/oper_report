@@ -9,7 +9,7 @@ jQuery(document).ready(function(){
 if(typeof ymaps == 'object') ymaps.ready(init);
 
 function init(){
-	if($('body').hasClass('index')){
+	if($('body').hasClass('index')||$('body').hasClass('mbox')){
 		var form = $('form.search');
 		var list = $('ul.list-situation');
 		var view = 10;
@@ -27,8 +27,8 @@ function init(){
 		});
 		myMap.behaviors.disable(['multiTouch']);
 		var arr = [], lastArr = [];
-		var navMap = $('#nav .view-map');
-		var navList = $('#nav .view-list');
+		var navMap = $('.view-map');
+		var navList = $('.view-list');
 		var wrap = $('.holder-situation');
 		var overlay = $('.overlay');
 		var pagination = $('ul.pagination');
@@ -489,7 +489,7 @@ function init(){
 		if(stopTime) clearTimeout(stopTime);
 		if (sformXHR)
 			sformXHR.abort();
-		sformXHR = $.ajax({
+			sformXHR = $.ajax({
 			type: 'POST',
 			data: form.serialize(),
 			dataType: 'json',
@@ -1386,20 +1386,19 @@ var pageInit = {
 //			});
 		})
 	},
-
 	openMailBox: function(){
 		$('div.mbox__table').each(function(){
 			var hold = $('.table__info'),
 				button = hold.find('.turn'),
 				buttonResize = hold.find('.maximize'),
+				header = $('.mbox-header'),
 				box = $('.mbox__table'),
-				heightBox2 = $('.table').innerHeight()-$('.table__info').innerHeight(),
+				heightBox2 = $('.table').innerHeight()-hold.innerHeight(),
 				heightBox = box.outerHeight(),
-				heightBody = $('.mbox').innerHeight()-$('.mbox-header').innerHeight()-$('.table__info').innerHeight(),
+				heightBody = $('.mbox').innerHeight()-header.innerHeight()-hold.innerHeight(),
 				speed = 300,
 				wrap = $('.wrap'),
 				tableWrap = $('.table__wrap'),
-				header = $('.mbox-header'),
 				caption = $('.table__caption').innerHeight(),
 				mboxHeaderE = 'mbox-header--';
 				animBox = function (e, expand, add, del){
@@ -1423,7 +1422,9 @@ var pageInit = {
 
 				if (!hold.hasClass('open') && !box.hasClass('full_open')) {
 
-					box.addClass('full_open'); //box.addClass('mbox__table--lg full_open');
+					box.addClass('full_open'); 
+					$('#map').css({display:'none'});
+
 					wrap.css({'max-height':+heightBody-caption-6});
 
 					tableWrap.css({height:+heightBody});
@@ -1436,14 +1437,17 @@ var pageInit = {
 				else if (hold.hasClass('open') && box.hasClass('full_open')) {
 
 					box.removeClass('full_open');
+					$('#map').css({display:'block'});
+
 
 					animBox(heightBody, 'close', 'sm', 'lg');
 				}
 				else if (hold.hasClass('open') && !box.hasClass('full_open')) {
 
 
-					box.addClass('full_open');   //box.addClass('mbox__table--lg full_open');
-					
+					box.addClass('full_open'); 
+					$('#map').css({display:'none'});
+
 					wrap.css({'max-height':+heightBody-caption-6});
 
 					$('#mCSB_1').css({'max-height':0});
@@ -1472,6 +1476,7 @@ var pageInit = {
 				else if (hold.hasClass('open') && box.hasClass('full_open')){
 		
 					box.removeClass('full_open');
+					$('#map').css({display:'block'});
 
 					animBox(heightBody, 'close', 'sm', 'lg');
 				}
