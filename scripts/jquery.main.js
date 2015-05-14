@@ -1026,7 +1026,7 @@ var pageInit = {
         this.autoCommentHeight();
 		this.initOpen();
 		this.checkPeople();
-		this.openMailBox();
+		this.openMailBox2();
 		this.simpleboxlink();
 		//this.index();
 		this.tooltip();
@@ -1386,39 +1386,139 @@ var pageInit = {
 //			});
 		})
 	},
-	openMailBox: function() {
-		$('div.mbox__table').each(function(){
-			var hold = $('.table__info'),
-				button = hold.find('.turn'),
-				buttonResize = hold.find('.maximize'),
-				header = $('.mbox-header'),
-				box = $('.mbox__table'),
-				heightBox2 = $('.table').innerHeight() - hold.innerHeight(),
-				heightBox = box.outerHeight(),
-				wrap = $('.wrap'),
-				tableWrap = $('.table__wrap'),
-				caption = $('.table__caption').innerHeight(),
-				mboxHeaderE = 'mbox-header--';
 
-				animBox = function(e, expand, add, del) {
-					box.animate({ marginTop: e });
+	openMailBox2: function () {
+		var	header = $('.mbox-header'),
+			box = $('.mbox__table'),
+			table = $('.wrap'), 
+			tableInfo = $('.table__info'),
+			tableCaption = $('.table__caption'),
+			tableWrap = $('.table__wrap'), //рабочая область
+			buttonTurn = $('.turn'),
+			buttonResize = $('.maximize'),
+			heightBody, //высота рабочей области
+			constHeightTableOpen = $('.table').innerHeight() - tableInfo.innerHeight(),
+			constHeightTableFull,
+			params,			
+			custom = {
+				init: function() {
+					custom.getHeightBody();
 
-					if (add) {
-						header.removeClass(mboxHeaderE + del);
-						header.addClass(mboxHeaderE + add);
+					tableWrap.css({height: + heightBody});
+					table.css({'max-height': + heightBody - $('.table__caption').innerHeight() - 6});	
+					box.css({marginTop: + heightBody});
+
+					buttonResize.on('click', this.resize);
+					buttonTurn.on('click', this.turn);
+					buttonTurn.trigger('click');
+				},
+				resize: function () {
+					custom.getHeightBody();
+					if (tableInfo.hasClass('full_open')) {
+						custom.animBox(custom.hide());
+					} else {
+							custom.animBox(custom.full());			
 					};
-					if (expand == 'full') {
+				},
+				turn: function () {
+					// custom.getHeightBody();
+					if (tableInfo.hasClass('full_open') || tableInfo.hasClass('open')){
+						custom.animBox(custom.hide());
+					} else {
+						custom.animBox(custom.show());
+					};
+				},
+				getHeightBody: function () {
+						heightBody = $('.mbox').innerHeight() - header.innerHeight() - tableInfo.innerHeight(), //высота рабочей области
+						constHeightTableFull = heightBody - $('.table__caption').innerHeight();	
+
+				},
+				show: function () {
+					table.css({'max-height': + constHeightTableOpen});
+					return([constHeightTableFull - constHeightTableOpen - 6, 'open']);
+
+				},
+				full: function () {
+					
+					table.css({'max-height': + heightBody - tableInfo.innerHeight() - 4});
+					tableWrap.css({height: + heightBody});
+
+					$('#mCSB_1').css({'max-height': 0});
+					$('#map').css({display: 'none'});
+
+					tableInfo.hasClass('open') ?
+						params = [0, 'full_open', 'lg', 'sm']:
+						params = [0, 'open full_open', 'lg', 'sm'];
+
+					return(params);
+				},
+				hide: function () {
+
+					header.hasClass('mbox-header--lg') ?
+						params = [heightBody, 'close', 'sm', 'lg']:
+						params = [heightBody, 'close'];
+
+					$('#map').css({display: 'block'});
+					return(params);
+				},
+				animBox: function(arr) { //e, expand, add, del
+					box.animate({ marginTop: arr[0] });
+
+					if (arr[2]) {
+						header.removeClass('mbox-header--' + arr[3]);
+						header.addClass('mbox-header--' + arr[2]);
+					};
+					if (arr[1] == 'close') {
+						tableInfo.removeClass('full_open');
+						tableInfo.removeClass('open');
 						return;
 					};
+					arr[1] ? tableInfo.addClass(arr[1]) : tableInfo.removeClass(arr[1]);
+				}
+			};
+			custom.init();
 
-					expand == 'open' ? hold.addClass('open') : hold.removeClass('open');
-				};
+			
+			
+
+	},
+	// openMailBox: function() {
+	// 	$('div.mbox__table').each(function(){
+	// 		var hold = $('.table__info'),
+	// 			button = hold.find('.turn'),
+	// 			buttonResize = hold.find('.maximize'),
+	// 			header = $('.mbox-header'),
+	// 			box = $('.mbox__table'),
+	// 			heightBox2 = $('.table').innerHeight() - hold.innerHeight(),
+	// 			heightBox = box.outerHeight(),
+	// 			wrap = $('.wrap'),
+	// 			tableWrap = $('.table__wrap'),
+	// 			caption = $('.table__caption').innerHeight(),
+	// 			mboxHeaderE = 'mbox-header--';
+
+	// 			animBox = function(e, expand, add, del) {
+	// 				box.animate({ marginTop: e });
+
+	// 				if (add) {
+	// 					header.removeClass(mboxHeaderE + del);
+	// 					header.addClass(mboxHeaderE + add);
+	// 				};
+
+	// 				if (expand == 'full') {
+	// 					return;
+	// 				};
+	// 				if (expand == 'close') {
+						
+	// 				};
+
+	// 				expand == 'open' ? hold.addClass('open') : hold.removeClass('open');
+	// 			};
 
 
 			// var custom = {
 			// 	init: function() {
-			// 		buttonResize.on('click', methodFirst);
-			// 		button.on('click', methodSecond);
+			// 		buttonResize.on('click', this.methodFirst);
+			// 		button.on('click', this.methodSecond);
 			// 	},
 			// 	methodFirst: function() {
 			// 		var heightBody = $('.mbox').innerHeight() - header.innerHeight() - hold.innerHeight();
@@ -1473,71 +1573,73 @@ var pageInit = {
 			// custom.init();
 
 
-			buttonResize.on('click', function() {
-				var heightBody = $('.mbox').innerHeight() - header.innerHeight() - hold.innerHeight();
+	// 		buttonResize.on('click', function() {
 
-				if (!hold.hasClass('open') && !box.hasClass('full_open')) {
-					box.addClass('full_open');
+	// 			var heightBody = $('.mbox').innerHeight() - header.innerHeight() - hold.innerHeight();
 
-					wrap.css({'max-height': + heightBody - caption - 6});
+	// 			if (!hold.hasClass('open') && !box.hasClass('full_open')) { //close
 
-					tableWrap.css({height: + heightBody});
-					box.css({marginTop: + heightBody});
 
-					$('#mCSB_1').css({'max-height': 0});
+	// 				box.addClass('full_open');
+	// 				wrap.css({'max-height': + heightBody - caption - 6});
+	// 				tableWrap.css({height: + heightBody});
+	// 				box.css({marginTop: + heightBody});
+	// 				$('#mCSB_1').css({'max-height': 0});
 
-					animBox(0, 'open', 'lg', 'sm');
-					$('#map').css({display: 'none'});
-				} else {
-					$('#map').css({display: (box.hasClass('full_open')) ? 'block' : 'none'});
+	// 				animBox(0, 'open', 'lg', 'sm');
 
-					if (box.hasClass('full_open')) {
-						box.removeClass('full_open');
+	// 				$('#map').css({display: 'none'});
 
-						animBox(heightBody, 'close', 'sm', 'lg');
-					} else {
-						box.addClass('full_open'); 
 
-						wrap.css({'max-height': + heightBody - caption - 6});
+	// 			} else {
+	// 				$('#map').css({display: (box.hasClass('full_open')) ? 'block' : 'none'});
 
-						$('#mCSB_1').css({'max-height': 0});
-						tableWrap.css({height: + heightBody});
-						box.css({marginTop: + heightBody});
+	// 				if (box.hasClass('full_open')) { //full-open
+	// 					box.removeClass('full_open');
 
-						animBox(0, 'full', 'lg', 'sm');	
-					}
-				};
+	// 					animBox(heightBody, 'close', 'sm', 'lg');
+	// 				} else {
+
+	// 					box.addClass('full_open'); //open
+	// 					wrap.css({'max-height': + heightBody - caption - 6});
+	// 					tableWrap.css({height: + heightBody});
+	// 					box.css({marginTop: + heightBody});
+	// 					$('#mCSB_1').css({'max-height': 0});
+
+	// 					animBox(0, 'full', 'lg', 'sm');	
+	// 				}
+	// 			};
 				
-			});
+	// 		});
 
-			button.on('click', function(e) {
-				var heightBody = $('.mbox').innerHeight() - header.innerHeight() - hold.innerHeight();
+	// 		button.on('click', function(e) {
+	// 			var heightBody = $('.mbox').innerHeight() - header.innerHeight() - hold.innerHeight();
 
-				if (!hold.hasClass('open') && !box.hasClass('full_open')){
+	// 			if (!hold.hasClass('open') && !box.hasClass('full_open')){ //close
 
-					tableWrap.css({height: + heightBox});
-					box.css({marginTop: + heightBox});
-					wrap.css({'max-height': + heightBox2});
+	// 				tableWrap.css({height: + heightBox});
+	// 				box.css({marginTop: + heightBox});
+	// 				wrap.css({'max-height': + heightBox2});
 
-					animBox(0, 'open');
-				}
-				else if (hold.hasClass('open') && !box.hasClass('full_open')){
+	// 				animBox(0, 'open');
+	// 			}
+	// 			else if (hold.hasClass('open') && !box.hasClass('full_open')){ //open
 
-					wrap.css({'max-height': + heightBox});
+	// 				wrap.css({'max-height': + heightBox});
 
-					animBox(heightBox);
-				}
-				else if (hold.hasClass('open') && box.hasClass('full_open')){
+	// 				animBox(heightBox);
+	// 			}
+	// 			else if (hold.hasClass('open') && box.hasClass('full_open')){ //full-open
 		
-					box.removeClass('full_open');
-					$('#map').css({display: 'block'});
+	// 				box.removeClass('full_open');
+	// 				$('#map').css({display: 'block'});
 
-					animBox(heightBody, 'close', 'sm', 'lg');
-				}
-				return false;
-			});
-		})
-	},
+	// 				animBox(heightBody, 'close', 'sm', 'lg');
+	// 			}
+	// 			return false;
+	// 		});
+	// 	})
+	// },
 	form: function(){
 		$('form').customForm();
 		$('.selectOptions.customSelect > div').customScrollV();
