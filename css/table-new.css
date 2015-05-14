@@ -157,10 +157,10 @@ background: url(../images/ico-warn.png) no-repeat
 	}
 	.mbox .wrap {
 		overflow-x: hidden;
-		max-height: 250px; /*for script*/
+		max-height: 248px; /*for script*/
 	}
 		.table__row {
-			border: 1px solid #D3D5D7
+			border: 1px solid #D3D5D7;
 		}
 			.table__cell {
 				display: table-cell;
@@ -213,7 +213,8 @@ background: url(../images/ico-warn.png) no-repeat
 	border-right: 1px solid #D2D2D2;
 	height: 18px;
 	float: right;
-	margin-top: 4px
+	margin-top: 4px;
+	margin-left: -1px
 }
 .caption__td {
 	padding-left: 24px
@@ -251,7 +252,7 @@ background: url(../images/ico-warn.png) no-repeat
 	max-width: 100px
 }
 .table__cell--descr {
-	width: 24%;
+	width: 23%;
 	max-width: 100px
 }
 .table__cell--local {
@@ -276,7 +277,7 @@ background: url(../images/ico-warn.png) no-repeat
 	margin: 0 auto;
 	width: 100%;
 	bottom: 30px;
-	height: 286px; /*for script*/
+	height: 290px; /*for script*/
 }
 
 /*==========width table for the future===========*/

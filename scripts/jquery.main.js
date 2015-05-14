@@ -1396,16 +1396,16 @@ var pageInit = {
 			tableWrap = $('.table__wrap'), //рабочая область
 			buttonTurn = $('.turn'),
 			buttonResize = $('.maximize'),
-			constHeightTableOpen = $('.table').innerHeight() - tableInfo.innerHeight(),
+			constHeightTableOpen = $('.table').outerHeight() - tableInfo.outerHeight(),
 			heightBody, //высота рабочей области
 			constHeightTableFull,
 			params,			
 			custom = {
 				init: function() {
 					custom.getHeightBody();
-
+					console.log(header.outerHeight());
 					tableWrap.css({height: + heightBody});
-					table.css({'max-height': + heightBody - $('.table__caption').innerHeight() - 6});	
+					table.css({'max-height': + heightBody - $('.table__caption').outerHeight() -6});	
 					box.css({marginTop: + heightBody});
 
 					buttonResize.on('click', this.resize);
@@ -1414,52 +1414,46 @@ var pageInit = {
 				},
 				resize: function () {
 					custom.getHeightBody();
-					if (tableInfo.hasClass('full_open')) {
-						custom.animBox(custom.hide());
-					} else {
-							custom.animBox(custom.full());			
-					};
+					(tableInfo.hasClass('full_open')) ? custom.animBox(custom.hide()) : custom.animBox(custom.full());
 				},
 				turn: function () {
 					// custom.getHeightBody();
-					if (tableInfo.hasClass('full_open') || tableInfo.hasClass('open')){
-						custom.animBox(custom.hide());
-					} else {
-						custom.animBox(custom.show());
-					};
+					(tableInfo.hasClass('full_open') || tableInfo.hasClass('open'))
+														? custom.animBox(custom.hide())
+														: custom.animBox(custom.show());
 				},
 				getHeightBody: function () {
-					heightBody = $('.mbox').innerHeight() - header.innerHeight() - tableInfo.innerHeight(), //высота рабочей области
-					constHeightTableFull = heightBody - $('.table__caption').innerHeight();	
+					heightBody = $('.mbox').outerHeight() - header.outerHeight() - tableInfo.innerHeight(), //высота рабочей области
+					constHeightTableFull = heightBody - $('.table__caption').outerHeight();	
 
 				},
 				show: function () {
 					table.css({'max-height': + constHeightTableOpen});
-					return([constHeightTableFull - constHeightTableOpen - 4, 'open']);
+					return [constHeightTableFull - constHeightTableOpen -4, 'open'];
 				},
 				full: function () {
-					table.css({'max-height': + heightBody - tableInfo.innerHeight() - 4});
+					table.css({'max-height': + heightBody - tableInfo.outerHeight() - 4});
 					tableWrap.css({height: + heightBody});
 
 					$('#mCSB_1').css({'max-height': 0});
 					$('#map').css({display: 'none'});
 
-					tableInfo.hasClass('open') ?
-						params = [0, 'full_open', 'lg', 'sm']:
-						params = [0, 'open full_open', 'lg', 'sm'];
+					tableInfo.hasClass('open') 
+						? params = [0, 'full_open', 'lg', 'sm']
+						: params = [0, 'open full_open', 'lg', 'sm'];
 
-					return(params);
+					return params;
 				},
 				hide: function () {
-					header.hasClass('mbox-header--lg') ?
-						params = [heightBody, 'close', 'sm', 'lg']:
-						params = [heightBody, 'close'];
+					header.hasClass('mbox-header--lg') 
+						? params = [heightBody, 'close', 'sm', 'lg']
+						: params = [heightBody, 'close'];
 
 					$('#map').css({display: 'block'});
-					return(params);
+					return params;
 				},
 				animBox: function(arr) { //margin, expand, add, del
-					box.animate({ marginTop: arr[0] });
+					box.animate({ marginTop: arr[0]  });
 
 					if (arr[2]) {
 						header.removeClass('mbox-header--' + arr[3]);
@@ -1481,7 +1475,7 @@ var pageInit = {
 	// 			button = hold.find('.turn'),
 	// 			buttonResize = hold.find('.maximize'),
 	// 			header = $('.mbox-header'),
-	// 			box = $('.mbox__table'),
+	// 			box =$('.mbox__table'),
 	// 			heightBox2 = $('.table').innerHeight() - hold.innerHeight(),
 	// 			heightBox = box.outerHeight(),
 	// 			wrap = $('.wrap'),
