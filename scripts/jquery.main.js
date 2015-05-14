@@ -1429,7 +1429,7 @@ var pageInit = {
 				},
 				show: function () {
 					table.css({'max-height': + constHeightTableOpen});
-					return [constHeightTableFull - constHeightTableOpen -4, 'open'];
+					return [constHeightTableFull - constHeightTableOpen -2, 'open'];
 				},
 				full: function () {
 					table.css({'max-height': + heightBody - tableInfo.outerHeight() - 4});
