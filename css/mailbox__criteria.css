@@ -41,6 +41,12 @@
 					border: none;
 				}
 
+				/* ===== some states for form or form elements ===== */
+				.criteria__main .col-3 .hold-data > .criteria--datetime {
+					height: 28px;
+					width: 130px;
+				}
+
 				/* ===== top panel at criteria form ===== */
 				.criteria__top-panel {
 					padding: 5px;
@@ -102,3 +108,76 @@
 				.criteria__main {
 					padding-bottom: 1em;
 				}
+					.ranges__item {
+						margin: 1em 0;
+						font-size: 8px;
+					}
+					.ranges__item--injured,
+					.ranges__item--dead,
+					.ranges__item--hospitalized {
+						background: url(../images/field-background-sm.png) no-repeat 10px 2em;
+						padding-left: 30px;
+					}
+						.ranges--row:last-child {
+							margin-top: 1.4em;
+						}
+							.ranges--row > [class*="ranges__"] {
+							  	line-height: 2.8em;
+								vertical-align: top;
+							}
+							.ranges__lbl {
+								width: 60px;
+							}
+								.ranges--row > .ranges__lbl--sm-line {
+									line-height: 1.3em;
+								}
+							.ranges__fields {}
+
+					.criteria--col .criteria__hospitalized > .title,
+					.criteria--col .medical-evacuation > .title--evacuation {
+						margin: 8em 0 0;
+					}
+					.criteria__evacuation > .medical-evacuation > .title--evacuation {
+						padding-left: 35px;
+					}
+					.ranges__item--evacuation {
+						background: url(../images/field-background-sm-2.png) no-repeat 35px 1.9em;
+					}
+						.ranges__item--evacuation .ranges--row {}
+						.ranges__item--evacuation .ranges--row:nth-of-type(2),
+						.ranges__item--evacuation .ranges--row:nth-of-type(3) {
+						  	margin-top: 1.3em;
+						}
+						.ranges__item--evacuation .ranges--row:last-child {
+							margin-top: 4.4em;
+						}
+							.ranges__item--evacuation .ranges__lbl {
+								width: 75px;
+							}
+					.ranges__item--hospitalized	> .ranges--row {
+						text-align: left;
+					}
+
+				/* ===== bottom panel at criteria form ===== */
+				.criteria__footer {
+					height: 32px;
+  					background: #766e69;
+				}
+				.criteria__footer > div {
+					display: inline-block;
+				}
+					.criteria__footer-checkbox {
+					  	padding: 9px;
+  						line-height: 1em;
+					}
+					.criteria__footer-search {
+						float: right;
+					}
+						.btn--search {
+							padding: 7px 20px 8px;
+							background: #00a3f5;
+							font: 15px/32px Arial, sans-serif;
+							text-align: center;
+							text-decoration: none;
+							text-transform: uppercase;
+						}

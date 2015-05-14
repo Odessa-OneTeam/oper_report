@@ -131,7 +131,7 @@ background: url(../images/ico-warn.png) no-repeat
 				TABLE
 ============================================*/
 .mbox #wrapper {
-position: relative;
+	position: relative;
 }
 .mbox {
 /*	overflow-y: hidden*/

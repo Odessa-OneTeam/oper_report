@@ -92,16 +92,200 @@
 										</div>
 										<div class="criteria__main">
 											<div class="columns">
-												<div class="col-1">
-													Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime dolorem nihil minus, quasi, dicta cupiditate aut magni ea veniam natus provident eveniet tempore iure minima placeat distinctio ducimus quo cum.
+												<div class="col-1 criteria--col">
+													<div class="selects">
+														<label>Тип донесения</label>
+														<div class="hold-select">
+															<select name="" id="" class="customSelect">
+																<option value="">Первичное</option>
+															</select>
+														</div>
+														<label>Вид ЧС</label>
+														<div class="hold-select">
+															<select name="" id="" class="customSelect">
+																<option value="">Вид</option>
+															</select>
+														</div>
+														<label>Наименование организации</label>
+														<div class="hold-select">
+															<select name="" id="" class="customSelect">
+																<option value="">Название</option>
+															</select>
+														</div>	
+													</div>
+
+													<div class="ranges">
+														<label class="title">Пострадавшие</label>	
+														<div class="ranges__item ranges__item--injured">						
+															<div class="row-1 ranges--row">
+																<label class="ranges__lbl">всего</label>
+																<span class="ranges__fields">
+																	<span>от</span>
+																	<input type="text" class="sm-input"> 
+																	<span>до</span>
+																	<input type="text" class="sm-input">
+																</span>
+															</div>
+															<div class="row-2 ranges--row">
+																<label class="ranges__lbl">в т.ч. детей</label>
+																<span class="ranges__fields">
+																	<span>от</span>
+																	<input type="text" class="sm-input">
+																	<span>до</span>
+																	<input type="text" class="sm-input">
+																</span>
+															</div>
+														</div>
+													</div>
+
+													<div class="ranges">
+														<label class="title">Погибшие</label>
+														<div class="ranges__item ranges__item--dead">
+															<div class="row-1 ranges--row">
+																<label class="ranges__lbl">всего</label>
+																<span class="ranges__fields">
+																	<span>от</span>
+																	<input type="text" class="sm-input"> 
+																	<span>до</span>
+																	<input type="text" class="sm-input">
+																</span>
+															</div>
+															<div class="row-2 ranges--row">
+																<label class="ranges__lbl">в т.ч. детей</label>
+																<span class="ranges__fields">
+																	<span>от</span>
+																	<input type="text" class="sm-input" >
+																	<span>до</span>
+																	<input type="text" class="sm-input">
+																</span>
+															</div>
+														</div>
+													</div>
 												</div>
-												<div class="col-2">
-													Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime dolorem nihil minus, quasi, dicta cupiditate aut magni ea veniam natus provident eveniet tempore iure minima placeat distinctio ducimus quo cum.
+
+
+												<div class="col-2 criteria--col">
+													<div class="selects">
+														<label>Тип ЧС</label>
+														<div class="hold-select">
+															<select class="customSelect">
+																<option value="">Тип</option>
+															</select>
+														</div>
+														<label>Масштаб ЧС</label>
+														<div class="hold-select">
+															<select class="customSelect">
+																<option value="">Масштаб</option>
+															</select>
+														</div>
+													</div>
+
+													<div class="criteria__evacuation">
+														<div class="medical-evacuation ranges">
+															<label class="title title--evacuation">Мед. эвакуация</label>
+															<div class="ranges__item ranges__item--evacuation">
+																<div class="row-1 ranges--row">
+																	<label class="ranges__lbl">всего</label>
+																	<span class="ranges__fields">
+																		<span>от</span>
+																		<input type="text" class="sm-input"> 
+																		<span>до</span>
+																		<input type="text" class="sm-input">
+																	</span>
+																</div>
+																<div class="row-2 ranges--row">
+																	<label class="ranges__lbl">в т.ч. детей</label>
+																	<span class="ranges__fields">
+																		<span>от</span>
+																		<input type="text" class="sm-input">
+																		<span>до</span>
+																		<input type="text" class="sm-input">
+																	</span>
+																</div>
+																<div class="row-3 ranges--row">
+																	<label class="ranges__lbl ranges__lbl--sm-line">авиа транспортом</label>
+																	<span class="ranges__fields">
+																		<span>от</span>
+																		<input type="text" class="sm-input">
+																		<span>до</span>
+																		<input type="text" class="sm-input">
+																	</span>
+																</div>
+																<div class="row-4 ranges--row">
+																	<label class="ranges__lbl">в т.ч. детей</label>
+																	<span class="ranges__fields">
+																		<span>от</span>
+																		<input type="text" class="sm-input">
+																		<span>до</span>
+																		<input type="text" class="sm-input">
+																	</span>
+																</div>
+															</div>
+														</div>
+													</div>
 												</div>
-												<div class="col-3">
-													Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime dolorem nihil minus, quasi, dicta cupiditate aut magni ea veniam natus provident eveniet tempore iure minima placeat distinctio ducimus quo cum.
+
+
+												<div class="col-3 criteria--col">
+													<div class="selects">
+														<label>Дата создания донесения</label>
+														<div class="date-create">
+															<div class="hold-data">
+																<input type="text" class="criteria--datetime" name="datetimeEs" readonly="readonly">
+																<a class="ui-datepicker-trigger" href="#date" data-class="ui-datepicker-trigger"></a>
+															</div>
+															<div class="hold-data">
+																<input type="text" class="criteria--datetime" name="datetimeEs" readonly="readonly">
+																<a class="ui-datepicker-trigger" href="#date" data-class="ui-datepicker-trigger"></a>
+															</div>
+														</div>
+														<label>Дата и время ЧС</label>
+														<div class="date-event">
+															<div class="hold-data">
+																<input type="text" class="criteria--datetime" name="datetimeEs" readonly="readonly">
+																<a class="ui-datepicker-trigger" href="#date" data-class="ui-datepicker-trigger"></a>
+															</div>
+															<div class="hold-data">
+																<input type="text" class="criteria--datetime" name="datetimeEs" readonly="readonly">
+																<a class="ui-datepicker-trigger" href="#date" data-class="ui-datepicker-trigger"></a>
+															</div>
+														</div>
+													</div>
+													
+													<div class="criteria__hospitalized ranges">
+														<label class="title">Госпитализировано</label>
+														<div class="ranges__item ranges__item--hospitalized">
+															<div class="row-1 ranges--row">
+																<label class="ranges__lbl">всего</label>
+																<span class="ranges__fields">
+																	<span>от</span>
+																	<input type="text" class="sm-input">
+																	<span>до</span>
+																	<input type="text" class="sm-input">
+																</span>
+															</div>
+															<div class="row-2 ranges--row">
+																<label class="ranges__lbl">в т.ч. детей</label>
+																<span class="ranges__fields">
+																	<span>от</span>
+																	<input type="text" class="sm-input">
+																	<span>до</span>
+																	<input type="text" class="sm-input">
+																</span>
+															</div>
+														</div>
+													</div>
 												</div>
 											</div>
+										</div>
+										<div class="criteria__footer">
+											<div class="criteria__footer-checkbox">
+												<input class="customCheckbox" type="checkbox" name="with-finished" id="checkbox02">
+												<label for="checkbox02">За последние сутки</label>
+											</div>
+											<div class="criteria__footer-search">
+			                                    <a href="#" class="btn--search">найти</a>
+			                                </div>
 										</div>
 									</fieldset>
 								</form>
