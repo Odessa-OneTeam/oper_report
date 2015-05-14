@@ -1026,7 +1026,7 @@ var pageInit = {
         this.autoCommentHeight();
 		this.initOpen();
 		this.checkPeople();
-		this.openMailBox2();
+		this.openMailBox();
 		this.simpleboxlink();
 		//this.index();
 		this.tooltip();
@@ -1387,7 +1387,7 @@ var pageInit = {
 		})
 	},
 
-	openMailBox2: function () {
+	openMailBox: function () {
 		var	header = $('.mbox-header'),
 			box = $('.mbox__table'),
 			table = $('.wrap'), 
@@ -1396,8 +1396,8 @@ var pageInit = {
 			tableWrap = $('.table__wrap'), //рабочая область
 			buttonTurn = $('.turn'),
 			buttonResize = $('.maximize'),
-			heightBody, //высота рабочей области
 			constHeightTableOpen = $('.table').innerHeight() - tableInfo.innerHeight(),
+			heightBody, //высота рабочей области
 			constHeightTableFull,
 			params,			
 			custom = {
@@ -1429,17 +1429,15 @@ var pageInit = {
 					};
 				},
 				getHeightBody: function () {
-						heightBody = $('.mbox').innerHeight() - header.innerHeight() - tableInfo.innerHeight(), //высота рабочей области
-						constHeightTableFull = heightBody - $('.table__caption').innerHeight();	
+					heightBody = $('.mbox').innerHeight() - header.innerHeight() - tableInfo.innerHeight(), //высота рабочей области
+					constHeightTableFull = heightBody - $('.table__caption').innerHeight();	
 
 				},
 				show: function () {
 					table.css({'max-height': + constHeightTableOpen});
-					return([constHeightTableFull - constHeightTableOpen - 6, 'open']);
-
+					return([constHeightTableFull - constHeightTableOpen - 4, 'open']);
 				},
 				full: function () {
-					
 					table.css({'max-height': + heightBody - tableInfo.innerHeight() - 4});
 					tableWrap.css({height: + heightBody});
 
@@ -1453,7 +1451,6 @@ var pageInit = {
 					return(params);
 				},
 				hide: function () {
-
 					header.hasClass('mbox-header--lg') ?
 						params = [heightBody, 'close', 'sm', 'lg']:
 						params = [heightBody, 'close'];
@@ -1461,7 +1458,7 @@ var pageInit = {
 					$('#map').css({display: 'block'});
 					return(params);
 				},
-				animBox: function(arr) { //e, expand, add, del
+				animBox: function(arr) { //margin, expand, add, del
 					box.animate({ marginTop: arr[0] });
 
 					if (arr[2]) {
@@ -1477,10 +1474,6 @@ var pageInit = {
 				}
 			};
 			custom.init();
-
-			
-			
-
 	},
 	// openMailBox: function() {
 	// 	$('div.mbox__table').each(function(){
