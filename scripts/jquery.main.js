@@ -1403,10 +1403,15 @@ var pageInit = {
 			custom = {
 				init: function() {
 					custom.getHeightBody();
-					console.log(header.outerHeight());
-					tableWrap.css({height: + heightBody});
-					table.css({'max-height': + heightBody - $('.table__caption').outerHeight() -6});	
-					box.css({marginTop: + heightBody});
+
+
+
+					tableWrap.css({height: heightBody});
+
+					table.css({'max-height': heightBody - tableCaption.outerHeight()});
+					console.log('table:' + table.outerHeight());	
+
+					box.css({marginTop: heightBody});
 
 					buttonResize.on('click', this.resize);
 					buttonTurn.on('click', this.turn);
@@ -1414,6 +1419,14 @@ var pageInit = {
 				},
 				resize: function () {
 					custom.getHeightBody();
+
+					console.log('header:' + header.outerHeight());
+					console.log('body:' + $('.mbox').outerHeight());
+					console.log('table_wrap:' + tableWrap.outerHeight());
+					console.log('tableCaption:' + tableCaption.outerHeight());
+					
+					console.log('tableInfo:' + tableInfo.innerHeight());
+
 					(tableInfo.hasClass('full_open')) ? custom.animBox(custom.hide()) : custom.animBox(custom.full());
 				},
 				turn: function () {
@@ -1428,12 +1441,15 @@ var pageInit = {
 
 				},
 				show: function () {
-					table.css({'max-height': + constHeightTableOpen});
-					return [constHeightTableFull - constHeightTableOpen -2, 'open'];
+					table.css({'max-height': constHeightTableOpen});
+					return [constHeightTableFull - constHeightTableOpen, 'open'];
 				},
 				full: function () {
-					table.css({'max-height': + heightBody - tableInfo.outerHeight() - 4});
-					tableWrap.css({height: + heightBody});
+					table.css({'max-height': constHeightTableFull});
+					console.log('table:' + table.outerHeight());
+					console.log('constHeightTableFull:' + constHeightTableFull);
+
+					tableWrap.css({height: heightBody});
 
 					$('#mCSB_1').css({'max-height': 0});
 					$('#map').css({display: 'none'});

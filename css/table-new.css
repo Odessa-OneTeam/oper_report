@@ -214,10 +214,10 @@ background: url(../images/ico-warn.png) no-repeat
 	height: 18px;
 	float: right;
 	margin-top: 4px;
-	margin-left: -1px
+	margin-left: -10px
 }
 .caption__td {
-	padding-left: 24px
+/*	padding-left: 24px*/
 }
 .caption__td:first-child {
 	padding: 0;
@@ -276,7 +276,7 @@ background: url(../images/ico-warn.png) no-repeat
 	position: absolute;
 	margin: 0 auto;
 	width: 100%;
-	bottom: 30px;
+	bottom: 32px;
 	height: 290px; /*for script*/
 }
 
@@ -312,7 +312,7 @@ background: url(../images/ico-warn.png) no-repeat
 ==========================================*/
 
 .mCSB_container{
-	margin-right: 30px
+	margin-right: 28px
 }
 .mCSB_1_scrollbar.mCS-oper-report {
 	box-shadow: rgb(115, 120, 128) 0px 0px 2px;
@@ -327,6 +327,7 @@ background: url(../images/ico-warn.png) no-repeat
 }
 .mCSB_scrollTools .mCSB_buttonDown {
 	bottom: 0;
+	-webkit-transform: rotate(180deg);
 	transform: rotate(180deg)
 }
 .mCSB_scrollTools .mCSB_buttonDown,

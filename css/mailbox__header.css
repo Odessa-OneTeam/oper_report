@@ -39,22 +39,25 @@
 			box-shadow: #686d73 0 1px 1px;
 		}
 			.mbox-header__title {
-				width: calc(100% - (168px + 24px));
-				margin: -32px 0 0 calc(168px + 24px);
+				width: 100%;
+				margin: -32px 0 0 0;
 				/* 	24px - summary at block '.holder-time' right and left paddings; 
 					168px - width '.holder-time'.
 					Используется, т.к. box-sizing не был установлен. */
 			}
 			.mbox-header__title h1 {
-				height: 1em;
-				width: calc(100% - 70px); /* 70px - summary at right and left paddings */
+				/*height: 1em;*/
+				/*width: calc(100% - 70px);*/ /* 70px - summary at right and left paddings */
 				margin: 0;
-				padding: 8px 35px 6px;
+				padding: 8px 35px 6px 220px;
 				font: 14px/1em 'robotobold_condensed', Arial, sans-serif;
 				border-bottom: 4px solid #4d5055;
 				-webkit-text-shadow: #4d5055 1px 1px 1px;
 				-moz-text-shadow: #4d5055 1px 1px 1px;
 				text-shadow: #4d5055 1px 1px 1px;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
 			}
 
 
