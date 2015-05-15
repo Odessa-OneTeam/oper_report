@@ -1404,13 +1404,8 @@ var pageInit = {
 				init: function() {
 					custom.getHeightBody();
 
-
-
 					tableWrap.css({height: heightBody});
-
 					table.css({'max-height': heightBody - tableCaption.outerHeight()});
-					console.log('table:' + table.outerHeight());	
-
 					box.css({marginTop: heightBody});
 
 					buttonResize.on('click', this.resize);
@@ -1419,14 +1414,7 @@ var pageInit = {
 				},
 				resize: function () {
 					custom.getHeightBody();
-
-					console.log('header:' + header.outerHeight());
-					console.log('body:' + $('.mbox').outerHeight());
-					console.log('table_wrap:' + tableWrap.outerHeight());
-					console.log('tableCaption:' + tableCaption.outerHeight());
 					
-					console.log('tableInfo:' + tableInfo.innerHeight());
-
 					(tableInfo.hasClass('full_open')) ? custom.animBox(custom.hide()) : custom.animBox(custom.full());
 				},
 				turn: function () {
