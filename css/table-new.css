@@ -236,7 +236,7 @@ background: url(../images/ico-warn.png) no-repeat
 }
 
 /*========== width cell ===========*/
-/* 11+8+7+24+8+10+14+18=100%  */
+/* 11+10+6+24+8+10+14+18=100%  */
 
 
 .table__cell--date {
@@ -244,11 +244,11 @@ background: url(../images/ico-warn.png) no-repeat
 	max-width: 100px
 }
 .table__cell--code {
-	width: 8%;
+	width: 10%;
 	max-width: 100px
 }
 .table__cell--report {
-	width: 7%;
+	width: 6%;
 	max-width: 100px
 }
 .table__cell--descr {
