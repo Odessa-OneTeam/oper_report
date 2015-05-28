@@ -18,27 +18,26 @@
 .table__row:hover {
 	background: #fff
 }
-.table__caption,
-.table__row--warning_def {
-	background: #EDF0F2
-}
-.table__row--warning_blue {
-	background: #D5E9F3
-}
 .table__row--warning_red .table__cell--date {
 	border-left: 8px solid #d9230f
 }
-.table__row--warning_blue .table__cell--date {
+.table__row--warning_orange .table__cell--date {
 	border-left: 8px solid #FF7D00
 }
-.table__row--warning_def .table__cell--date {
+.table__row--warning_yellow .table__cell--date {
 	border-left: 8px solid #FFC800
 }
-.table__row--warning_red {
+.mCSB_container,
+.table__caption,
+.table__row {
+	background: #EDF0F2
+}
+.table__row--bg_red {
 	background: #EBDBDB
 }
-.warning_red .table__cell--code,
-.warning_red .table__cell--descr,
+.table__row--bg_blue {
+	background: #D5E9F3
+}
 .caption__td_name {
 	color: #111
 }
@@ -177,9 +176,21 @@ background: url(../images/ico-warn.png) no-repeat
 			}
 			.table__row--warning_red .table__cell--descr a,
 			.caption__td:first-child,
-			.table__cell--date span {
+			.table__cell--date a {
 			  	font-family: Arial;
 			  	font-weight: bold
+			}
+			.table__sort {
+				color: #333;
+				text-decoration: none;
+				position: absolute;
+				top: 5px;
+  				width: 100px;
+ 				background: url(../images/bg-bottom-new.png) no-repeat 77px 9px
+			}
+			.table__sort:hover {}
+			.table__sort.end {
+				background-position: 77px -31px
 			}
 				.ico_warn,
 				.ico_status_warn {
@@ -188,14 +199,14 @@ background: url(../images/ico-warn.png) no-repeat
 				.ico_status_edit {
 					background: url(../images/ico-status-edit.png) no-repeat;
 				}
-				.ico_warn,
+				.ico_warn {
+					padding: 3px 9px;
+					margin-right: 4px;
+				}
 				.ico_status_warn,
 				.ico_status_edit {
-					padding: 3px 9px;
-					margin: 0px 4px 0 20px;
-				}
-				.ico_warn {
-					margin-left: 0
+					float: right;
+					padding: 10px
 				}
 				.ico_scale_color {
 					padding: 0 13px	0 20px;
@@ -236,15 +247,15 @@ background: url(../images/ico-warn.png) no-repeat
 }
 
 /*========== width cell ===========*/
-/* 11+10+6+24+8+10+14+18=100%  */
+/*  11+8+6+24+8+10+14+14  */
 
 
 .table__cell--date {
 	width: 11%;
-	max-width: 100px
+	min-width: 165px
 }
 .table__cell--code {
-	width: 10%;
+	width: 8%;
 	max-width: 100px
 }
 .table__cell--report {
@@ -266,9 +277,9 @@ background: url(../images/ico-warn.png) no-repeat
 	max-width: 100px
 }
 .table__cell--status {
-	max-width: 225px;
+	min-width: 225px;
 	padding: 0;
-	width: 18%
+	width: 14%
 }
 
 
@@ -312,11 +323,13 @@ background: url(../images/ico-warn.png) no-repeat
 ==========================================*/
 
 .mCSB_container{
-	margin-right: 28px
+	margin-right: 28px;
+	min-height: 250px
 }
 .mCSB_1_scrollbar.mCS-oper-report {
 	box-shadow: rgb(115, 120, 128) 0px 0px 2px;
-	width: 28px
+	width: 28px;
+	  z-index: 50;
 }
 .mCSB_scrollTools,
 .mCSB_scrollTools .mCSB_draggerContainer {

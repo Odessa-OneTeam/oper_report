@@ -1430,12 +1430,15 @@ var pageInit = {
 				},
 				show: function () {
 					table.css({'max-height': constHeightTableOpen});
+					$('#mCSB_1_container').css({'min-height': constHeightTableOpen});
 					return [constHeightTableFull - constHeightTableOpen, 'open'];
 				},
 				full: function () {
 					table.css({'max-height': constHeightTableFull});
-					console.log('table:' + table.outerHeight());
-					console.log('constHeightTableFull:' + constHeightTableFull);
+					$('#mCSB_1_container').css({'min-height': constHeightTableFull});
+
+					// console.log('table:' + table.outerHeight());
+					// console.log('constHeightTableFull:' + constHeightTableFull);
 
 					tableWrap.css({height: heightBody});
 
